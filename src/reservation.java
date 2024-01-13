@@ -39,8 +39,8 @@ public class reservation extends javax.swing.JFrame {
         register = new javax.swing.JMenu();
         jMenu6 = new javax.swing.JMenu();
         jMenu9 = new javax.swing.JMenu();
-        jMenu7 = new javax.swing.JMenu();
-        jMenu8 = new javax.swing.JMenu();
+        about_us = new javax.swing.JMenu();
+        FAQ = new javax.swing.JMenu();
 
         jScrollPane1.setViewportView(jEditorPane1);
 
@@ -108,11 +108,11 @@ public class reservation extends javax.swing.JFrame {
         jMenu9.setText("Προτάσεις");
         jMenuBar1.add(jMenu9);
 
-        jMenu7.setText("About Us");
-        jMenuBar1.add(jMenu7);
+        about_us.setText("About Us");
+        jMenuBar1.add(about_us);
 
-        jMenu8.setText("FAQ");
-        jMenuBar1.add(jMenu8);
+        FAQ.setText("FAQ");
+        jMenuBar1.add(FAQ);
 
         setJMenuBar(jMenuBar1);
 
@@ -124,7 +124,9 @@ public class reservation extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void registerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerMouseClicked
-        // TODO add your handling code here:
+        register r1=new register();
+        r1.setVisible(true);        // TODO add your handling code here:
+        this.setVisible(false);
     }//GEN-LAST:event_registerMouseClicked
 
     private void homeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeMouseClicked
@@ -169,6 +171,8 @@ public class reservation extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu FAQ;
+    private javax.swing.JMenu about_us;
     private javax.swing.JMenu home;
     private javax.swing.JButton jButton1;
     private javax.swing.JEditorPane jEditorPane1;
@@ -177,8 +181,6 @@ public class reservation extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu6;
-    private javax.swing.JMenu jMenu7;
-    private javax.swing.JMenu jMenu8;
     private javax.swing.JMenu jMenu9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
