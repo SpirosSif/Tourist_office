@@ -34,9 +34,9 @@ public class reservation extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
+        home = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
-        jMenu5 = new javax.swing.JMenu();
+        register = new javax.swing.JMenu();
         jMenu6 = new javax.swing.JMenu();
         jMenu9 = new javax.swing.JMenu();
         jMenu7 = new javax.swing.JMenu();
@@ -83,14 +83,24 @@ public class reservation extends javax.swing.JFrame {
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 554));
 
-        jMenu1.setText("Αρχική");
-        jMenuBar1.add(jMenu1);
+        home.setText("Αρχική");
+        home.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                homeMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(home);
 
         jMenu2.setText("Σύνδεση");
         jMenuBar1.add(jMenu2);
 
-        jMenu5.setText("Εγγραφή");
-        jMenuBar1.add(jMenu5);
+        register.setText("Εγγραφή");
+        register.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                registerMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(register);
 
         jMenu6.setText("κρατήσεις");
         jMenuBar1.add(jMenu6);
@@ -112,6 +122,16 @@ public class reservation extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void registerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_registerMouseClicked
+
+    private void homeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeMouseClicked
+        home home1 = new home();
+        home1.setVisible(true);        
+        this.setVisible(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_homeMouseClicked
 
     /**
      * @param args the command line arguments
@@ -149,14 +169,13 @@ public class reservation extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu home;
     private javax.swing.JButton jButton1;
     private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenu jMenu7;
     private javax.swing.JMenu jMenu8;
@@ -165,5 +184,6 @@ public class reservation extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JMenu register;
     // End of variables declaration//GEN-END:variables
 }

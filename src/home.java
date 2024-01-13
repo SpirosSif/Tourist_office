@@ -31,7 +31,7 @@ public class home extends javax.swing.JFrame {
         jMenu10 = new javax.swing.JMenu();
         jPanel2 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        reservation = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -42,7 +42,7 @@ public class home extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
-        jMenu5 = new javax.swing.JMenu();
+        signup = new javax.swing.JMenu();
         jMenu6 = new javax.swing.JMenu();
         jMenu9 = new javax.swing.JMenu();
         jMenu7 = new javax.swing.JMenu();
@@ -72,16 +72,21 @@ public class home extends javax.swing.JFrame {
         });
         jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 360, 140, -1));
 
-        jButton2.setBackground(new java.awt.Color(0, 153, 255));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Κρατήσεις");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+        reservation.setBackground(new java.awt.Color(0, 153, 255));
+        reservation.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        reservation.setForeground(new java.awt.Color(255, 255, 255));
+        reservation.setText("Κρατήσεις");
+        reservation.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                reservationMouseClicked(evt);
             }
         });
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 220, 140, -1));
+        reservation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reservationActionPerformed(evt);
+            }
+        });
+        jPanel2.add(reservation, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 220, 140, -1));
 
         jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(255, 204, 0));
@@ -126,7 +131,7 @@ public class home extends javax.swing.JFrame {
             }
         }.getIcon());
         jLabel4.setText("jLabel4");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 840, 420));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 840, 430));
 
         jMenu1.setText("Αρχική");
         jMenuBar1.add(jMenu1);
@@ -134,8 +139,13 @@ public class home extends javax.swing.JFrame {
         jMenu2.setText("Σύνδεση");
         jMenuBar1.add(jMenu2);
 
-        jMenu5.setText("Εγγραφή");
-        jMenuBar1.add(jMenu5);
+        signup.setText("Εγγραφή");
+        signup.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                signupMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(signup);
 
         jMenu6.setText("κρατήσεις");
         jMenuBar1.add(jMenu6);
@@ -179,9 +189,21 @@ public class home extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void reservationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reservationActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_reservationActionPerformed
+
+    private void reservationMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reservationMouseClicked
+        reservation r1 = new reservation();        // TODO add your handling code here:
+        r1.setVisible(true);
+//        this.setVisible(false);
+    }//GEN-LAST:event_reservationMouseClicked
+
+    private void signupMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signupMouseClicked
+        register reg1 = new register();        // TODO add your handling code here:
+        reg1.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_signupMouseClicked
 
     /**
      * @param args the command line arguments
@@ -220,7 +242,6 @@ public class home extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -230,7 +251,6 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenu jMenu7;
     private javax.swing.JMenu jMenu8;
@@ -241,5 +261,7 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
+    private javax.swing.JButton reservation;
+    private javax.swing.JMenu signup;
     // End of variables declaration//GEN-END:variables
 }
