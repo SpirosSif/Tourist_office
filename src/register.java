@@ -178,7 +178,7 @@ public class register extends javax.swing.JFrame {
       //  l1.setVisible(true);
         //this.setVisible(false);
     }//GEN-LAST:event_loginMouseClicked
-
+  
     private void registerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerMouseClicked
         // TODO add your handling code here:
         register r1 = new register();
