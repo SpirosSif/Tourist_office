@@ -39,10 +39,10 @@ public class register extends javax.swing.JFrame {
         jTextField6 = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
+        home = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
-        jMenu4 = new javax.swing.JMenu();
+        reservation = new javax.swing.JMenu();
         jMenu5 = new javax.swing.JMenu();
         jMenu6 = new javax.swing.JMenu();
         jMenu7 = new javax.swing.JMenu();
@@ -86,8 +86,13 @@ public class register extends javax.swing.JFrame {
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jMenu1.setText("Αρχική");
-        jMenuBar1.add(jMenu1);
+        home.setText("Αρχική");
+        home.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                homeMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(home);
 
         jMenu2.setText("Σύνδεση");
         jMenuBar1.add(jMenu2);
@@ -95,8 +100,13 @@ public class register extends javax.swing.JFrame {
         jMenu3.setText("Εγγραφή");
         jMenuBar1.add(jMenu3);
 
-        jMenu4.setText("Κρατήσεις");
-        jMenuBar1.add(jMenu4);
+        reservation.setText("Κρατήσεις");
+        reservation.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                reservationMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(reservation);
 
         jMenu5.setText("Συμβουλές");
         jMenuBar1.add(jMenu5);
@@ -122,6 +132,14 @@ public class register extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void homeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeMouseClicked
+            // TODO add your handling code here:
+    }//GEN-LAST:event_homeMouseClicked
+
+    private void reservationMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reservationMouseClicked
+
+    }//GEN-LAST:event_reservationMouseClicked
 
     /**
      * @param args the command line arguments
@@ -159,16 +177,15 @@ public class register extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu home;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenu jMenu7;
@@ -180,5 +197,6 @@ public class register extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
+    private javax.swing.JMenu reservation;
     // End of variables declaration//GEN-END:variables
 }

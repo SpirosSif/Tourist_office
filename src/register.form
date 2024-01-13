@@ -4,10 +4,13 @@
   <NonVisualComponents>
     <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
       <SubComponents>
-        <Menu class="javax.swing.JMenu" name="jMenu1">
+        <Menu class="javax.swing.JMenu" name="home">
           <Properties>
             <Property name="text" type="java.lang.String" value="&#x391;&#x3c1;&#x3c7;&#x3b9;&#x3ba;&#x3ae;"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="homeMouseClicked"/>
+          </Events>
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu2">
           <Properties>
@@ -19,10 +22,13 @@
             <Property name="text" type="java.lang.String" value="&#x395;&#x3b3;&#x3b3;&#x3c1;&#x3b1;&#x3c6;&#x3ae;"/>
           </Properties>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenu4">
+        <Menu class="javax.swing.JMenu" name="reservation">
           <Properties>
             <Property name="text" type="java.lang.String" value="&#x39a;&#x3c1;&#x3b1;&#x3c4;&#x3ae;&#x3c3;&#x3b5;&#x3b9;&#x3c2;"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="reservationMouseClicked"/>
+          </Events>
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu5">
           <Properties>
