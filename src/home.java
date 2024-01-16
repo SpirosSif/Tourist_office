@@ -41,12 +41,12 @@ public class home extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
+        login = new javax.swing.JMenu();
         signup = new javax.swing.JMenu();
-        jMenu6 = new javax.swing.JMenu();
-        jMenu9 = new javax.swing.JMenu();
-        jMenu7 = new javax.swing.JMenu();
-        jMenu8 = new javax.swing.JMenu();
+        reservations = new javax.swing.JMenu();
+        sugg = new javax.swing.JMenu();
+        aboutus = new javax.swing.JMenu();
+        faq = new javax.swing.JMenu();
 
         jMenu3.setText("File");
         jMenuBar2.add(jMenu3);
@@ -136,8 +136,13 @@ public class home extends javax.swing.JFrame {
         jMenu1.setText("Αρχική");
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Σύνδεση");
-        jMenuBar1.add(jMenu2);
+        login.setText("Σύνδεση");
+        login.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                loginMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(login);
 
         signup.setText("Εγγραφή");
         signup.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -147,17 +152,37 @@ public class home extends javax.swing.JFrame {
         });
         jMenuBar1.add(signup);
 
-        jMenu6.setText("κρατήσεις");
-        jMenuBar1.add(jMenu6);
+        reservations.setLabel("Kρατήσεις");
+        reservations.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                reservationsMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(reservations);
 
-        jMenu9.setText("Προτάσεις");
-        jMenuBar1.add(jMenu9);
+        sugg.setText("Προτάσεις");
+        sugg.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                suggMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(sugg);
 
-        jMenu7.setText("About Us");
-        jMenuBar1.add(jMenu7);
+        aboutus.setText("About Us");
+        aboutus.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                aboutusMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(aboutus);
 
-        jMenu8.setText("FAQ");
-        jMenuBar1.add(jMenu8);
+        faq.setText("FAQ");
+        faq.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                faqMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(faq);
 
         setJMenuBar(jMenuBar1);
 
@@ -205,6 +230,36 @@ public class home extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_signupMouseClicked
 
+    private void suggMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_suggMouseClicked
+        suggestion sugg1 = new suggestion();
+        sugg1.setVisible(true);
+        this.setVisible(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_suggMouseClicked
+
+    private void aboutusMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aboutusMouseClicked
+        about_us ab = new about_us();
+        ab.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_aboutusMouseClicked
+
+    private void reservationsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reservationsMouseClicked
+        reservation res1= new reservation();
+        res1.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_reservationsMouseClicked
+
+    private void loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseClicked
+        login log = new login();
+        log.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_loginMouseClicked
+
+    private void faqMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_faqMouseClicked
+            FAQ faq1 = new FAQ();
+            faq1.setVisible(true);
+            this.setVisible(false);
+    }//GEN-LAST:event_faqMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -241,6 +296,8 @@ public class home extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu aboutus;
+    private javax.swing.JMenu faq;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -248,20 +305,18 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu10;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu6;
-    private javax.swing.JMenu jMenu7;
-    private javax.swing.JMenu jMenu8;
-    private javax.swing.JMenu jMenu9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
+    private javax.swing.JMenu login;
     private javax.swing.JButton reservation;
+    private javax.swing.JMenu reservations;
     private javax.swing.JMenu signup;
+    private javax.swing.JMenu sugg;
     // End of variables declaration//GEN-END:variables
 }
