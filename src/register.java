@@ -1,3 +1,10 @@
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -32,13 +39,12 @@ public class register extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
+        Name = new javax.swing.JTextField();
+        Password = new javax.swing.JPasswordField();
+        UserName = new javax.swing.JTextField();
+        Surname = new javax.swing.JTextField();
+        Email = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         home = new javax.swing.JMenu();
         login = new javax.swing.JMenu();
@@ -67,11 +73,11 @@ public class register extends javax.swing.JFrame {
 
         jLabel5.setText("κωδικός :");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, -1, -1));
-        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 44, 376, -1));
-        jPanel2.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 376, -1));
-        jPanel2.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 376, -1));
-        jPanel2.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 100, 376, -1));
-        jPanel2.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 156, 376, -1));
+        jPanel2.add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 44, 376, -1));
+        jPanel2.add(Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 376, -1));
+        jPanel2.add(UserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 376, -1));
+        jPanel2.add(Surname, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 100, 376, -1));
+        jPanel2.add(Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 156, 376, -1));
 
         jButton2.setText("Υποβολή");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -81,27 +87,15 @@ public class register extends javax.swing.JFrame {
         });
         jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, -1, -1));
 
-        jButton3.setText("Υποβολή");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 481, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jButton3)
-                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jButton3)
-                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         home.setText("Αρχική");
@@ -162,7 +156,53 @@ public class register extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+     String errorMessage="";
+        // Έλεγχος για κενά πεδία
+    if (Name.getText().trim().isEmpty() ||
+         Surname.getText().trim().isEmpty() ||
+          Email.getText().trim().isEmpty() ||
+        UserName.getText().trim().isEmpty() ||
+        Password.getText().trim().isEmpty()) 
+    {
+        errorMessage += "One or more fields are empty\n";
+    }
+    // Εμφάνιση μηνυμάτων σε περίπτωση λαθών
+    if (!errorMessage.isEmpty()) {
+        JOptionPane.showMessageDialog(null, errorMessage);
+    } else {
+        try {
+            // Σύνδεση με τη βάση δεδομένων
+            String url = "jdbc:mysql://localhost:3306/touristoffice";
+            String user = "root";
+            String password = "";
+            Connection myconnection = DriverManager.getConnection(url, user, password);
+
+            // Κατασκευή του SQL ερωτήματος για την εισαγωγή δεδομένων
+            String insertQuery = "INSERT INTO customers (id,first_name, last_name, email, username, pwd) VALUES (?,?,?, ?, ?, ?)";
+            PreparedStatement preparedStatement = myconnection.prepareStatement(insertQuery);
+            preparedStatement.setString(1, Name.getText());
+            preparedStatement.setString(2, Name.getText());
+            preparedStatement.setString(3,Surname.getText());
+            preparedStatement.setString(4, Email.getText());
+            preparedStatement.setString(5, UserName.getText());
+            preparedStatement.setString(6, Password.getText());
+        
+           // Εκτέλεση του SQL ερωτήματος
+            int rowsInserted = preparedStatement.executeUpdate();
+            if (rowsInserted > 0) {
+                JOptionPane.showMessageDialog(null, "Successful data entry!");
+            } else {
+                JOptionPane.showMessageDialog(null, "Unsuccessful data entry!");
+            }
+
+            preparedStatement.close();
+            myconnection.close();
+       } catch (SQLException e) 
+        {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Error while inserting data into database");
+        }
+    }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void homeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeMouseClicked
@@ -229,11 +269,15 @@ public class register extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Email;
     private javax.swing.JMenu FAQ;
+    private javax.swing.JTextField Name;
+    private javax.swing.JPasswordField Password;
+    private javax.swing.JTextField Surname;
+    private javax.swing.JTextField UserName;
     private javax.swing.JMenu about_us;
     private javax.swing.JMenu home;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -242,11 +286,6 @@ public class register extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
     private javax.swing.JMenu login;
     private javax.swing.JMenu register;
     private javax.swing.JMenu reservation;
