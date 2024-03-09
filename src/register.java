@@ -1,4 +1,4 @@
-
+import java.sql.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -178,14 +178,13 @@ public class register extends javax.swing.JFrame {
             Connection myconnection = DriverManager.getConnection(url, user, password);
 
             // Κατασκευή του SQL ερωτήματος για την εισαγωγή δεδομένων
-            String insertQuery = "INSERT INTO customers (id,first_name, last_name, email, username, pwd) VALUES (?,?,?, ?, ?, ?)";
+            String insertQuery = "INSERT INTO customers (first_name, last_name, email, username, pwd) VALUES (?,?, ?, ?, ?)";
             PreparedStatement preparedStatement = myconnection.prepareStatement(insertQuery);
-            preparedStatement.setString(1, Name.getText());
-            preparedStatement.setString(2, Name.getText());
-            preparedStatement.setString(3,Surname.getText());
-            preparedStatement.setString(4, Email.getText());
-            preparedStatement.setString(5, UserName.getText());
-            preparedStatement.setString(6, Password.getText());
+           preparedStatement.setString(1, Name.getText());
+            preparedStatement.setString(2,Surname.getText());
+            preparedStatement.setString(3, Email.getText());
+            preparedStatement.setString(4, UserName.getText());
+            preparedStatement.setString(5, Password.getText());
         
            // Εκτέλεση του SQL ερωτήματος
             int rowsInserted = preparedStatement.executeUpdate();
