@@ -66,10 +66,14 @@ public class login extends javax.swing.JFrame {
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         Password.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        Password.setText("Password");
         Password.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 PasswordFocusGained(evt);
+            }
+        });
+        Password.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PasswordActionPerformed(evt);
             }
         });
 
@@ -82,14 +86,11 @@ public class login extends javax.swing.JFrame {
         });
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Email");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Κωδικός Πρόσβασης");
 
-        check.setForeground(new java.awt.Color(0, 0, 0));
         check.setText("Εμφάνιση κωδικού πρόσβασης");
         check.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,10 +140,11 @@ public class login extends javax.swing.JFrame {
                     .addComponent(UserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(56, 56, 56)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4)
-                    .addComponent(check))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Password, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel4)
+                        .addComponent(check)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -257,6 +259,10 @@ public class login extends javax.swing.JFrame {
             Password.setEchoChar('*');
         }
     }//GEN-LAST:event_checkActionPerformed
+
+    private void PasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PasswordActionPerformed
 
     /**
      * @param args the command line arguments
