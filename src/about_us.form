@@ -42,6 +42,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="&#x3a0;&#x3c1;&#x3bf;&#x3c4;&#x3ac;&#x3c3;&#x3b5;&#x3b9;&#x3c2;"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tipsMouseClicked"/>
+          </Events>
         </Menu>
         <Menu class="javax.swing.JMenu" name="about_us">
           <Properties>
@@ -52,6 +55,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="FAQ"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="FAQMouseClicked"/>
+          </Events>
         </Menu>
       </SubComponents>
     </Menu>

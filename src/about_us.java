@@ -118,12 +118,22 @@ public class about_us extends javax.swing.JFrame {
         jMenuBar1.add(reservation);
 
         tips.setText("Προτάσεις");
+        tips.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tipsMouseClicked(evt);
+            }
+        });
         jMenuBar1.add(tips);
 
         about_us.setText("Σχετικά με εμάς");
         jMenuBar1.add(about_us);
 
         FAQ.setText("FAQ");
+        FAQ.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                FAQMouseClicked(evt);
+            }
+        });
         jMenuBar1.add(FAQ);
 
         setJMenuBar(jMenuBar1);
@@ -171,6 +181,20 @@ public class about_us extends javax.swing.JFrame {
         r1.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_reservationMouseClicked
+
+    private void tipsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tipsMouseClicked
+        // TODO add your handling code here:
+        suggestion s1 = new suggestion();
+        s1.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_tipsMouseClicked
+
+    private void FAQMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FAQMouseClicked
+        // TODO add your handling code here:
+         FAQ f1 = new FAQ();
+        f1.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_FAQMouseClicked
 
     /**
      * @param args the command line arguments
