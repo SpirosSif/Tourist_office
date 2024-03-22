@@ -35,10 +35,10 @@ public class reservation extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         home = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
+        login = new javax.swing.JMenu();
         register = new javax.swing.JMenu();
-        jMenu6 = new javax.swing.JMenu();
-        jMenu9 = new javax.swing.JMenu();
+        reserv = new javax.swing.JMenu();
+        sugg = new javax.swing.JMenu();
         about_us = new javax.swing.JMenu();
         FAQ = new javax.swing.JMenu();
 
@@ -91,8 +91,13 @@ public class reservation extends javax.swing.JFrame {
         });
         jMenuBar1.add(home);
 
-        jMenu2.setText("Σύνδεση");
-        jMenuBar1.add(jMenu2);
+        login.setText("Σύνδεση");
+        login.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                loginMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(login);
 
         register.setText("Εγγραφή");
         register.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -102,16 +107,38 @@ public class reservation extends javax.swing.JFrame {
         });
         jMenuBar1.add(register);
 
-        jMenu6.setText("κρατήσεις");
-        jMenuBar1.add(jMenu6);
+        reserv.setText("Κρατήσεις");
+        reserv.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                reservMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(reserv);
 
-        jMenu9.setText("Προτάσεις");
-        jMenuBar1.add(jMenu9);
+        sugg.setText("Προτάσεις");
+        sugg.setActionCommand("sugg");
+        sugg.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                suggMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(sugg);
+        sugg.getAccessibleContext().setAccessibleName("sugg");
 
         about_us.setText("About Us");
+        about_us.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                about_usMouseClicked(evt);
+            }
+        });
         jMenuBar1.add(about_us);
 
         FAQ.setText("FAQ");
+        FAQ.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                FAQMouseClicked(evt);
+            }
+        });
         jMenuBar1.add(FAQ);
 
         setJMenuBar(jMenuBar1);
@@ -134,6 +161,41 @@ public class reservation extends javax.swing.JFrame {
         home1.setVisible(true);        
         this.setVisible(false);        // TODO add your handling code here:
     }//GEN-LAST:event_homeMouseClicked
+
+    private void FAQMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FAQMouseClicked
+        // TODO add your handling code here:
+        FAQ f1 = new FAQ();
+        f1.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_FAQMouseClicked
+
+    private void about_usMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_about_usMouseClicked
+        // TODO add your handling code here:
+        about_us ab1=new about_us();
+        ab1.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_about_usMouseClicked
+
+    private void suggMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_suggMouseClicked
+        // TODO add your handling code here:
+        suggestion sugg1=new suggestion();
+        sugg1.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_suggMouseClicked
+
+    private void reservMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reservMouseClicked
+        // TODO add your handling code here:
+        reservation res1=new reservation();
+        res1.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_reservMouseClicked
+
+    private void loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseClicked
+        // TODO add your handling code here:
+        login login1= new login();
+        login1.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_loginMouseClicked
 
     /**
      * @param args the command line arguments
@@ -179,13 +241,13 @@ public class reservation extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu6;
-    private javax.swing.JMenu jMenu9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JMenu login;
     private javax.swing.JMenu register;
+    private javax.swing.JMenu reserv;
+    private javax.swing.JMenu sugg;
     // End of variables declaration//GEN-END:variables
 }
