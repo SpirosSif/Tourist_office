@@ -130,7 +130,7 @@ public class register extends javax.swing.JFrame {
         });
         jMenuBar1.add(reservation);
 
-        tips.setText("Συμβουλές");
+        tips.setText("Προτάσεις");
         tips.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tipsMouseClicked(evt);
