@@ -38,7 +38,7 @@
         </Menu>
         <Menu class="javax.swing.JMenu" name="tips">
           <Properties>
-            <Property name="text" type="java.lang.String" value="&#x3a3;&#x3c5;&#x3bc;&#x3b2;&#x3bf;&#x3c5;&#x3bb;&#x3ad;&#x3c2;"/>
+            <Property name="text" type="java.lang.String" value="&#x3a0;&#x3c1;&#x3bf;&#x3c4;&#x3ac;&#x3c3;&#x3b5;&#x3b9;&#x3c2;"/>
           </Properties>
         </Menu>
         <Menu class="javax.swing.JMenu" name="about_us">

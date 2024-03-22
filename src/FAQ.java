@@ -109,7 +109,7 @@ public class FAQ extends javax.swing.JFrame {
         });
         jMenuBar1.add(reservation);
 
-        tips.setText("Συμβουλές");
+        tips.setText("Προτάσεις");
         jMenuBar1.add(tips);
 
         about_us.setText("Σχετικά με εμάς");
