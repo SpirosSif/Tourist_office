@@ -44,12 +44,13 @@ public class login extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         check = new javax.swing.JCheckBox();
         jMenuBar1 = new javax.swing.JMenuBar();
+        home = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
+        register = new javax.swing.JMenu();
         reservation = new javax.swing.JMenu();
         suggestion = new javax.swing.JMenu();
         about_us = new javax.swing.JMenu();
         FAQ = new javax.swing.JMenu();
-        home = new javax.swing.JMenu();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -161,8 +162,24 @@ public class login extends javax.swing.JFrame {
                 .addContainerGap(41, Short.MAX_VALUE))
         );
 
+        home.setText("Αρχική");
+        home.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                homeMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(home);
+
         jMenu2.setText("Σύνδεση");
         jMenuBar1.add(jMenu2);
+
+        register.setText("Εγγραφή");
+        register.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                registerMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(register);
 
         reservation.setText("Κρατήσεις");
         reservation.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -190,14 +207,6 @@ public class login extends javax.swing.JFrame {
             }
         });
         jMenuBar1.add(FAQ);
-
-        home.setText("Αρχική");
-        home.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                homeMouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(home);
 
         setJMenuBar(jMenuBar1);
 
@@ -229,6 +238,7 @@ public class login extends javax.swing.JFrame {
         // TODO add your handling code here:
         home home=new home();
         home.setVisible(true);
+         this.setVisible(false);
         
         
     }//GEN-LAST:event_homeMouseClicked
@@ -293,18 +303,21 @@ public class login extends javax.swing.JFrame {
         // TODO add your handling code here:
         reservation reservation=new reservation();
         reservation.setVisible(true);
+         this.setVisible(false);
     }//GEN-LAST:event_reservationMouseClicked
 
     private void about_usMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_about_usMouseClicked
         // TODO add your handling code here:
         about_us about_us=new about_us();
         about_us.setVisible(true);
+         this.setVisible(false);
     }//GEN-LAST:event_about_usMouseClicked
 
     private void FAQMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FAQMouseClicked
         // TODO add your handling code here:
         FAQ FAQ=new FAQ();
         FAQ.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_FAQMouseClicked
 
     private void checkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkActionPerformed
@@ -322,6 +335,14 @@ public class login extends javax.swing.JFrame {
     private void PasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_PasswordActionPerformed
+
+    private void registerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerMouseClicked
+        // TODO add your handling code here:
+         register  register=new register();
+        register.setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_registerMouseClicked
 
     /**
      * @param args the command line arguments
@@ -375,6 +396,7 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JMenu register;
     private javax.swing.JMenu reservation;
     private javax.swing.JMenu suggestion;
     // End of variables declaration//GEN-END:variables
