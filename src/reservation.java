@@ -27,11 +27,13 @@ public class reservation extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jEditorPane1 = new javax.swing.JEditorPane();
+        to = new javax.swing.JComboBox<>();
+        from = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
+        jTextField1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         home = new javax.swing.JMenu();
@@ -46,6 +48,12 @@ public class reservation extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        to.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(to, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 200, 380, 60));
+
+        from.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(from, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 380, 60));
 
         jButton1.setBackground(new java.awt.Color(0, 204, 255));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -64,10 +72,10 @@ public class reservation extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel2.setText("ΑΠΟ");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 160, 60, -1));
+        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 200, 380, 60));
 
         jTextField1.setActionCommand("<Not Set>");
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 200, 380, 60));
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 200, 380, 60));
 
         jLabel1.setIcon(new javax.swing.JLabel() {
             public javax.swing.Icon getIcon() {
@@ -235,6 +243,7 @@ public class reservation extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu FAQ;
     private javax.swing.JMenu about_us;
+    private javax.swing.JComboBox<String> from;
     private javax.swing.JMenu home;
     private javax.swing.JButton jButton1;
     private javax.swing.JEditorPane jEditorPane1;
@@ -249,5 +258,6 @@ public class reservation extends javax.swing.JFrame {
     private javax.swing.JMenu register;
     private javax.swing.JMenu reserv;
     private javax.swing.JMenu sugg;
+    private javax.swing.JComboBox<String> to;
     // End of variables declaration//GEN-END:variables
 }
