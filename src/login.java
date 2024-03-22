@@ -1,3 +1,10 @@
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -37,12 +44,12 @@ public class login extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         check = new javax.swing.JCheckBox();
         jMenuBar1 = new javax.swing.JMenuBar();
-        home = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
         reservation = new javax.swing.JMenu();
         suggestion = new javax.swing.JMenu();
         about_us = new javax.swing.JMenu();
         FAQ = new javax.swing.JMenu();
+        home = new javax.swing.JMenu();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -154,14 +161,6 @@ public class login extends javax.swing.JFrame {
                 .addContainerGap(41, Short.MAX_VALUE))
         );
 
-        home.setText("Αρχική");
-        home.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                homeMouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(home);
-
         jMenu2.setText("Σύνδεση");
         jMenuBar1.add(jMenu2);
 
@@ -191,6 +190,14 @@ public class login extends javax.swing.JFrame {
             }
         });
         jMenuBar1.add(FAQ);
+
+        home.setText("Αρχική");
+        home.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                homeMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(home);
 
         setJMenuBar(jMenuBar1);
 
@@ -228,6 +235,58 @@ public class login extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        if(UserName.getText().trim().isEmpty() && Password.getText().trim().isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "User Name and Password are empty");
+        }
+        else if(UserName.getText().trim().isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "User Name is empty");
+        }
+        else if(Password.getText().trim().isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "Password is empty");
+        }
+        else
+        {
+            String user_name=UserName.getText();
+            String password=Password.getText();
+            Connection myconnection;
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+                String url ="jdbc:mysql://localhost/touristoffice";
+                String user1 = "root";
+                String password1 = "";
+                myconnection = DriverManager.getConnection(url,user1,password1);
+                if (myconnection != null)
+                System.out.println("Connected to the database touristoffice");
+                Statement stm=myconnection.createStatement();
+                ResultSet rs = stm.executeQuery("select * from customers");
+                boolean found=false;
+                while(rs.next())
+                {
+                    String userName=rs.getString(4);
+                    String passWord=rs.getString(6);
+                
+                    
+                    if(user_name.equals(userName) && password.equals(passWord))
+                    {
+                        found=true;
+                        JOptionPane.showMessageDialog(null, "User name and password are correct.");
+                    }
+                if(!found)
+                    {
+                        JOptionPane.showMessageDialog(null, "User name and password are wrong.");
+                    }
+                myconnection.close();
+            }
+            }
+            catch(Exception e)
+            {
+                System.out.println("e");
+
+            }
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void reservationMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reservationMouseClicked
