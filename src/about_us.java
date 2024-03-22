@@ -153,9 +153,9 @@ public class about_us extends javax.swing.JFrame {
 
     private void loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseClicked
         // TODO add your handling code here:
-        //login l1 = new login();
-        //  l1.setVisible(true);
-        //this.setVisible(false);
+        login l1 = new login();
+        l1.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_loginMouseClicked
 
     private void registerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerMouseClicked
