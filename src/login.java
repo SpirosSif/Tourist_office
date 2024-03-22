@@ -190,6 +190,11 @@ public class login extends javax.swing.JFrame {
         jMenuBar1.add(reservation);
 
         suggestion.setText("Προτάσεις");
+        suggestion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                suggestionMouseClicked(evt);
+            }
+        });
         jMenuBar1.add(suggestion);
 
         about_us.setText("Σχετικά με εμάς");
@@ -343,6 +348,13 @@ public class login extends javax.swing.JFrame {
         this.setVisible(false);
         
     }//GEN-LAST:event_registerMouseClicked
+
+    private void suggestionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_suggestionMouseClicked
+        // TODO add your handling code here:
+        suggestion  suggestion=new suggestion();
+        suggestion.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_suggestionMouseClicked
 
     /**
      * @param args the command line arguments
