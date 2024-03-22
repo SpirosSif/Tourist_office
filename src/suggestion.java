@@ -284,33 +284,38 @@ public class suggestion extends javax.swing.JFrame {
 
     private void reservationMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reservationMouseClicked
         // TODO add your handling code here:
-        reservation reservation=new reservation();
-        reservation.setVisible(true);
+        reservation res1=new reservation();
+        res1.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_reservationMouseClicked
 
     private void about_usMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_about_usMouseClicked
         // TODO add your handling code here:
-        about_us about_us=new about_us();
-        about_us.setVisible(true);
+        about_us ab1=new about_us();
+        ab1.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_about_usMouseClicked
 
     private void FAQMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FAQMouseClicked
         // TODO add your handling code here:
-        FAQ FAQ=new FAQ();
-        FAQ.setVisible(true);
+        FAQ FAQ1=new FAQ();
+        FAQ1.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_FAQMouseClicked
 
     private void homeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeMouseClicked
         // TODO add your handling code here:
-        home home=new home();
-        home.setVisible(true);
+        home home1=new home();
+        home1.setVisible(true);
+        this.setVisible(false);
 
     }//GEN-LAST:event_homeMouseClicked
 
     private void loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseClicked
         // TODO add your handling code here:
-        login login=new login();
-        login.setVisible(true);
+        login log1=new login();
+        log1.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_loginMouseClicked
 
     /**
