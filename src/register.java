@@ -131,12 +131,27 @@ public class register extends javax.swing.JFrame {
         jMenuBar1.add(reservation);
 
         tips.setText("Συμβουλές");
+        tips.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tipsMouseClicked(evt);
+            }
+        });
         jMenuBar1.add(tips);
 
         about_us.setText("Σχετικά με εμάς");
+        about_us.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                about_usMouseClicked(evt);
+            }
+        });
         jMenuBar1.add(about_us);
 
         FAQ.setText("FAQ");
+        FAQ.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                FAQMouseClicked(evt);
+            }
+        });
         jMenuBar1.add(FAQ);
 
         setJMenuBar(jMenuBar1);
@@ -180,7 +195,7 @@ public class register extends javax.swing.JFrame {
             // Κατασκευή του SQL ερωτήματος για την εισαγωγή δεδομένων
             String insertQuery = "INSERT INTO customers (first_name, last_name, email, username, pwd) VALUES (?,?, ?, ?, ?)";
             PreparedStatement preparedStatement = myconnection.prepareStatement(insertQuery);
-           preparedStatement.setString(1, Name.getText());
+            preparedStatement.setString(1, Name.getText());
             preparedStatement.setString(2,Surname.getText());
             preparedStatement.setString(3, Email.getText());
             preparedStatement.setString(4, UserName.getText());
@@ -213,9 +228,9 @@ public class register extends javax.swing.JFrame {
 
     private void loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseClicked
         // TODO add your handling code here:
-        //login l1 = new login();
-      //  l1.setVisible(true);
-        //this.setVisible(false);
+        login l1 = new login();
+        l1.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_loginMouseClicked
   
     private void registerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerMouseClicked
@@ -231,6 +246,28 @@ public class register extends javax.swing.JFrame {
         r1.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_reservationMouseClicked
+
+    private void tipsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tipsMouseClicked
+        // TODO add your handling code here:
+        suggestion s1 = new suggestion();
+        s1.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_tipsMouseClicked
+
+    private void about_usMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_about_usMouseClicked
+        // TODO add your handling code here:
+        about_us a1 = new about_us();
+        a1.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_about_usMouseClicked
+
+    private void FAQMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FAQMouseClicked
+        // TODO add your handling code here:
+        FAQ f1 = new FAQ();
+        f1.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_FAQMouseClicked
+                              
 
     /**
      * @param args the command line arguments
