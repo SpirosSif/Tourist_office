@@ -110,12 +110,27 @@ public class FAQ extends javax.swing.JFrame {
         jMenuBar1.add(reservation);
 
         tips.setText("Προτάσεις");
+        tips.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tipsMouseClicked(evt);
+            }
+        });
         jMenuBar1.add(tips);
 
         about_us.setText("Σχετικά με εμάς");
+        about_us.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                about_usMouseClicked(evt);
+            }
+        });
         jMenuBar1.add(about_us);
 
         FAQ.setText("FAQ");
+        FAQ.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                FAQMouseClicked(evt);
+            }
+        });
         jMenuBar1.add(FAQ);
 
         setJMenuBar(jMenuBar1);
@@ -143,9 +158,9 @@ public class FAQ extends javax.swing.JFrame {
 
     private void loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseClicked
         // TODO add your handling code here:
-        //login l1 = new login();
-        //  l1.setVisible(true);
-        //this.setVisible(false);
+        login l1 = new login();
+        l1.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_loginMouseClicked
 
     private void registerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerMouseClicked
@@ -161,6 +176,25 @@ public class FAQ extends javax.swing.JFrame {
         r1.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_reservationMouseClicked
+
+    private void tipsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tipsMouseClicked
+        // TODO add your handling code here:
+        suggestion s1 = new suggestion();
+        s1.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_tipsMouseClicked
+
+    private void FAQMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FAQMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_FAQMouseClicked
+
+    private void about_usMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_about_usMouseClicked
+        // TODO add your handling code here:
+        about_us a1 = new about_us();
+        a1.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_about_usMouseClicked
 
     /**
      * @param args the command line arguments
