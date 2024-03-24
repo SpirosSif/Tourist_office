@@ -33,7 +33,7 @@ public class reservation extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jEditorPane1 = new javax.swing.JEditorPane();
         to = new javax.swing.JComboBox<>();
-        from = new javax.swing.JComboBox<>();
+        from1 = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -57,13 +57,12 @@ public class reservation extends javax.swing.JFrame {
         to.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         getContentPane().add(to, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 200, 380, 60));
 
-        from.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        from.addActionListener(new java.awt.event.ActionListener() {
+        from1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fromActionPerformed(evt);
+                from1ActionPerformed(evt);
             }
         });
-        getContentPane().add(from, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 380, 60));
+        getContentPane().add(from1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 380, 60));
 
         jButton1.setBackground(new java.awt.Color(0, 204, 255));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -215,9 +214,10 @@ public class reservation extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_loginMouseClicked
 
-    private void fromActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fromActionPerformed
+    private void from1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_from1ActionPerformed
         // TODO add your handling code here:
         Connection myconnection;
+        
             try {
                 Class.forName("com.mysql.jdbc.Driver");
                 String url ="jdbc:mysql://localhost/touristoffice";
@@ -230,16 +230,17 @@ public class reservation extends javax.swing.JFrame {
                 Statement stm=myconnection.createStatement();
                 ResultSet rs = stm.executeQuery("select * from country");
                 while(rs.next()){
-                    from.addItem(rs.getString("c_name"));
+                    from1.addItem(rs.getString("c_name"));
+               
+                }
                 myconnection.close();
-            }
     }
             catch(Exception e)
             {
                 System.out.println("e");
-
+ 
             }
-    }//GEN-LAST:event_fromActionPerformed
+    }//GEN-LAST:event_from1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -279,7 +280,7 @@ public class reservation extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu FAQ;
     private javax.swing.JMenu about_us;
-    private javax.swing.JComboBox<String> from;
+    private javax.swing.JComboBox<String> from1;
     private javax.swing.JMenu home;
     private javax.swing.JButton jButton1;
     private javax.swing.JEditorPane jEditorPane1;
