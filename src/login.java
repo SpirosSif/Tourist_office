@@ -267,6 +267,7 @@ public class login extends javax.swing.JFrame {
             String user_name=UserName.getText();
             String password=Password.getText();
             Connection myconnection;
+            String userName,passWord,msg="";
             try {
                 Class.forName("com.mysql.jdbc.Driver");
                 String url ="jdbc:mysql://localhost/touristoffice";
@@ -280,21 +281,23 @@ public class login extends javax.swing.JFrame {
                 boolean found=false;
                 while(rs.next())
                 {
-                    String userName=rs.getString(4);
-                    String passWord=rs.getString(6);
+                    userName=rs.getString(4);
+                    passWord=rs.getString(6);
                 
                     
                     if(user_name.equals(userName) && password.equals(passWord))
                     {
                         found=true;
-                        JOptionPane.showMessageDialog(null, "User name and password are correct.");
+                        msg="User name and password are correct";
                     }
-                if(!found)
+                    else
                     {
-                        JOptionPane.showMessageDialog(null, "User name and password are wrong.");
+                        msg= "User name and password are wrong.";
                     }
-                myconnection.close();
-            }
+                
+                }
+            JOptionPane.showMessageDialog(null,msg);
+            myconnection.close();
             }
             catch(Exception e)
             {
