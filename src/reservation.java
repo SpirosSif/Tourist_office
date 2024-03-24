@@ -1,3 +1,8 @@
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -53,6 +58,11 @@ public class reservation extends javax.swing.JFrame {
         getContentPane().add(to, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 200, 380, 60));
 
         from.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        from.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fromActionPerformed(evt);
+            }
+        });
         getContentPane().add(from, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 380, 60));
 
         jButton1.setBackground(new java.awt.Color(0, 204, 255));
@@ -204,6 +214,32 @@ public class reservation extends javax.swing.JFrame {
         login1.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_loginMouseClicked
+
+    private void fromActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fromActionPerformed
+        // TODO add your handling code here:
+        Connection myconnection;
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+                String url ="jdbc:mysql://localhost/touristoffice";
+                String user1 = "root";
+                String password1 = "";
+                myconnection = DriverManager.getConnection(url,user1,password1);
+                if (myconnection != null)
+                System.out.println("Connected to the database touristoffice");
+                
+                Statement stm=myconnection.createStatement();
+                ResultSet rs = stm.executeQuery("select * from country");
+                while(rs.next()){
+                    from.addItem(rs.getString("c_name"));
+                myconnection.close();
+            }
+    }
+            catch(Exception e)
+            {
+                System.out.println("e");
+
+            }
+    }//GEN-LAST:event_fromActionPerformed
 
     /**
      * @param args the command line arguments
