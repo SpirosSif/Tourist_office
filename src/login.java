@@ -289,12 +289,14 @@ public class login extends javax.swing.JFrame {
                     {
                         found=true;
                         msg="User name and password are correct";
+                        
                     }
                     else
                     {
                         msg= "User name and password are wrong.";
                     }
-                
+                    if(found==true)
+                        break;
                 }
             JOptionPane.showMessageDialog(null,msg);
             myconnection.close();
