@@ -1,8 +1,7 @@
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import javax.swing.JOptionPane;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -193,26 +192,37 @@ public class reservation extends javax.swing.JFrame {
                 Statement stm=myconnection.createStatement();
                 ResultSet rs = stm.executeQuery("select * from country");
                 boolean found1=false,found2=false;
+                float cost=0;
+                int reply=0;
+                PreparedStatement ps1;
+                ResultSet rs1;
                 while(rs.next())
                 {
                     country1=rs.getString(2);
-                
-                    if(from.equals(country1))
+                    cost = rs.getFloat(3);
+                    if(from.equals("Athens"))
                         found1=true;
                     if(todest.equals(country1))
                         found2=true;
                     
                     if(found2==true && found1==true){
-                        msg="There are flights";
+                        reply = JOptionPane.showConfirmDialog(null, "Από Athens προς "+ country1 +" to κόστος είναι " +cost+"E\nΘέλετε να προχωρήσετε σε κράτηση;", "Κράτηση", JOptionPane.YES_NO_OPTION);
+                        if (reply == JOptionPane.YES_OPTION) {
+                            ps1=myconnection.prepareStatement("UPDATE country SET av_seats = av_seats-1 where pros=?");
+//                            ps1.setString(1,country1);
+                            rs1=ps1.executeQuery();
+                            JOptionPane.showMessageDialog(null, "Η θέση κρατήθηκε");
+                        } else {
+                            JOptionPane.showMessageDialog(null, "Η κράτηση ακυρώθηκε");
+                            System.exit(0);
+                        }
                         break;
                     }
-                    else
-                    {
-                        msg= "There are no flights to that";
-                    }
                 }
-            JOptionPane.showMessageDialog(null,msg);
-            myconnection.close();
+                if(found1!=true || found2!=true){
+                    JOptionPane.showMessageDialog(null,"There are no flights to that");
+                }
+                myconnection.close();
             }
             catch(Exception e)
             {
