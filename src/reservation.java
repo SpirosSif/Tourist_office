@@ -230,6 +230,7 @@ public class reservation extends javax.swing.JFrame {
                                 } else {
                                     System.out.println("No rows updated.");
                                 }
+                                
                             } catch (SQLException e) 
                             {
                                 e.printStackTrace();
