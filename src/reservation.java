@@ -194,6 +194,7 @@ public class reservation extends javax.swing.JFrame {
                 boolean found1=false,found2=false;
                 float cost=0;
                 int reply=0;
+                int av_seats=0;
                 PreparedStatement ps1;
                 ResultSet rs1;
                 while(rs.next())
@@ -208,9 +209,31 @@ public class reservation extends javax.swing.JFrame {
                     if(found2==true && found1==true){
                         reply = JOptionPane.showConfirmDialog(null, "Από Athens προς "+ country1 +" τo κόστος είναι " +cost+"E\nΘέλετε να προχωρήσετε σε κράτηση;", "Κράτηση", JOptionPane.YES_NO_OPTION);
                         if (reply == JOptionPane.YES_OPTION) {
-                            ps1=myconnection.prepareStatement("UPDATE country SET av_seats = av_seats-1 where pros=?");
-//                            ps1.setString(1,country1);
+                            ps1=myconnection.prepareStatement("select av_seats from country  where pros=?");
+                            ps1.setString(1,country1);
                             rs1=ps1.executeQuery();
+                            while(rs1.next())
+                            {
+                                av_seats=rs1.getInt(1); // fetch απο την βαση
+                            }
+                            av_seats--; //Αφαιρουμε μια θεση
+                            // Assuming you have a valid database connection 'myconnection'
+                            String updateQuery = "UPDATE country SET av_seats = ? WHERE pros = ?";
+
+                            try (PreparedStatement updateStatement = myconnection.prepareStatement(updateQuery)) {
+                                updateStatement.setInt(1, av_seats); // Set the new value
+                                updateStatement.setString(2, country1); // Set the condition (pros = ?)
+
+                                int rowsAffected = updateStatement.executeUpdate();
+                                if (rowsAffected > 0) {
+                                    System.out.println("Updated successfully!");
+                                } else {
+                                    System.out.println("No rows updated.");
+                                }
+                            } catch (SQLException e) 
+                            {
+                                e.printStackTrace();
+                            }
                             JOptionPane.showMessageDialog(null, "Η θέση κρατήθηκε");
                         } else {
                             JOptionPane.showMessageDialog(null, "Η κράτηση ακυρώθηκε");
