@@ -181,7 +181,7 @@ public class reservation extends javax.swing.JFrame {
             String from=frm.getText();
             String todest=to.getText();
             Connection myconnection;
-            String country1,country2,msg="";
+            String country1,msg="";
             try {
                 Class.forName("com.mysql.jdbc.Driver");
                 String url ="jdbc:mysql://localhost/touristoffice";
@@ -196,7 +196,6 @@ public class reservation extends javax.swing.JFrame {
                 while(rs.next())
                 {
                     country1=rs.getString(2);
-//                    country2=rs.getString(2);
                 
                     if(from.equals(country1))
                         found1=true;
@@ -211,16 +210,6 @@ public class reservation extends javax.swing.JFrame {
                     {
                         msg= "There are no flights to that";
                     }
-                        
-//                    if(from.equals(country1) || todest.equals(country1))
-//                    {
-//                        found=true;
-//                        
-//                        
-//                    }
-//                   
-//                    if(found==true)
-//                        break;
                 }
             JOptionPane.showMessageDialog(null,msg);
             myconnection.close();
