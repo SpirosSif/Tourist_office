@@ -166,7 +166,7 @@ public class reservation extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(frm.getText().trim().isEmpty() && to.getText().trim().isEmpty())
         {
-            JOptionPane.showMessageDialog(null, "User Name and Password are empty");
+            JOptionPane.showMessageDialog(null, "The fields are empty");
         }
         else if(frm.getText().trim().isEmpty())
         {
