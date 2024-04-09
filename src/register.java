@@ -205,6 +205,9 @@ public class register extends javax.swing.JFrame {
             int rowsInserted = preparedStatement.executeUpdate();
             if (rowsInserted > 0) {
                 JOptionPane.showMessageDialog(null, "Successful data entry!");
+                reservation r1 = new reservation();
+                r1.setVisible(true);
+                this.setVisible(false);
             } else {
                 JOptionPane.showMessageDialog(null, "Unsuccessful data entry!");
             }
@@ -242,9 +245,10 @@ public class register extends javax.swing.JFrame {
 
     private void reservationMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reservationMouseClicked
         // TODO add your handling code here:
-        reservation r1 = new reservation();
-        r1.setVisible(true);
-        this.setVisible(false);
+        JOptionPane.showMessageDialog(null, "You have to register or login");
+//        reservation r1 = new reservation();
+//        r1.setVisible(true);
+//        this.setVisible(false);
     }//GEN-LAST:event_reservationMouseClicked
 
     private void tipsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tipsMouseClicked
