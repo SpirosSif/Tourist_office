@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -242,12 +245,6 @@ public class home extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_aboutusMouseClicked
 
-    private void reservationsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reservationsMouseClicked
-        reservation res1= new reservation();
-        res1.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_reservationsMouseClicked
-
     private void loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseClicked
         login log = new login();
         log.setVisible(true);
@@ -259,6 +256,11 @@ public class home extends javax.swing.JFrame {
             faq1.setVisible(true);
             this.setVisible(false);
     }//GEN-LAST:event_faqMouseClicked
+
+    private void reservationsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reservationsMouseClicked
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "You have to register or login");
+    }//GEN-LAST:event_reservationsMouseClicked
 
     /**
      * @param args the command line arguments
