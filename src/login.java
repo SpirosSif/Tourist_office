@@ -289,7 +289,9 @@ public class login extends javax.swing.JFrame {
                     {
                         found=true;
                         msg="User name and password are correct";
-                        
+                        reservation r1 = new reservation();
+                        r1.setVisible(true);
+                        this.setVisible(false);
                     }
                     else
                     {
@@ -298,6 +300,7 @@ public class login extends javax.swing.JFrame {
                     if(found==true)
                         break;
                 }
+                
             JOptionPane.showMessageDialog(null,msg);
             myconnection.close();
             }
@@ -311,13 +314,14 @@ public class login extends javax.swing.JFrame {
 
     private void reservationMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reservationMouseClicked
         // TODO add your handling code here:
-        reservation reservation=new reservation();
-        reservation.setVisible(true);
-         this.setVisible(false);
+        JOptionPane.showMessageDialog(null, "You have to register or login");
+//        reservation reservation=new reservation();
+//        reservation.setVisible(true);
+//         this.setVisible(false);
     }//GEN-LAST:event_reservationMouseClicked
 
     private void about_usMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_about_usMouseClicked
-        // TODO add your handling code here:
+        // TODO add your handling code here: 
         about_us about_us=new about_us();
         about_us.setVisible(true);
          this.setVisible(false);
@@ -348,7 +352,8 @@ public class login extends javax.swing.JFrame {
 
     private void registerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerMouseClicked
         // TODO add your handling code here:
-         register  register=new register();
+       
+        register register=new register();
         register.setVisible(true);
         this.setVisible(false);
         
