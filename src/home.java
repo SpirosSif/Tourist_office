@@ -68,6 +68,11 @@ public class home extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Προορισμοί");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -222,8 +227,9 @@ public class home extends javax.swing.JFrame {
     }//GEN-LAST:event_reservationActionPerformed
 
     private void reservationMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reservationMouseClicked
-        reservation r1 = new reservation();        // TODO add your handling code here:
-        r1.setVisible(true);
+//        reservation r1 = new reservation();        // TODO add your handling code here:
+//        r1.setVisible(true);
+          JOptionPane.showMessageDialog(null, "You have to register or login");
 //        this.setVisible(false);
     }//GEN-LAST:event_reservationMouseClicked
 
@@ -261,6 +267,13 @@ public class home extends javax.swing.JFrame {
         // TODO add your handling code here:
         JOptionPane.showMessageDialog(null, "You have to register or login");
     }//GEN-LAST:event_reservationsMouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        suggestion sugg1=new suggestion();
+        sugg1.setVisible(true);
+        this.setVisible(false);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1MouseClicked
 
     /**
      * @param args the command line arguments
