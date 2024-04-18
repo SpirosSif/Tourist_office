@@ -4,6 +4,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
+import java.sql.*;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -14,7 +15,8 @@ import javax.swing.JOptionPane;
  *
  * @author Μαρία
  */
-public class login extends javax.swing.JFrame {
+public class login extends javax.swing.JFrame 
+{
     
     /**
      * Creates new form login
@@ -221,7 +223,7 @@ public class login extends javax.swing.JFrame {
             String user_name=UserName.getText();
             String password=Password.getText();
             Connection myconnection;
-            String userName,passWord,msg="";
+            String userName,passWord,msg="",email;
             try {
                 Class.forName("com.mysql.jdbc.Driver");
                 String url ="jdbc:mysql://localhost/touristoffice";
@@ -231,22 +233,27 @@ public class login extends javax.swing.JFrame {
                 if (myconnection != null)
                 System.out.println("Connected to the database touristoffice");
                 Statement stm=myconnection.createStatement();
-                ResultSet rs = stm.executeQuery("select * from customers");
+                //ResultSet rs = stm.executeQuery("select username from customers where email = ?");
+                PreparedStatement preparedStatement = myconnection.prepareStatement("select * from customers where email = ?");
+                preparedStatement.setString(1, UserName.getText());
+               ResultSet rs = preparedStatement.executeQuery();
                 boolean found=false;
                 while(rs.next())
                 {
-                    userName=rs.getString(4);
+                    email=rs.getString(4);
+                    userName=rs.getString(5);
                     passWord=rs.getString(6);
-                
-                    
-                    if(user_name.equals(userName) && password.equals(passWord))
+              
+                    if(user_name.equals(email) && password.equals(passWord))
                     {
                         found=true;
-                        msg="User name and password are correct";
-                        suggestion s1 = new suggestion();
-                        s1.setVisible(true);
-                        this.setVisible(false);
                         
+                            msg="User name and password are correct";
+                            suggestion s1 = new suggestion(userName);
+                          s1.setVisible(true);
+                         this.setVisible(false);
+                        //new profile(user_name).setVisible(true);
+                       
                     }
                     else
                     {
@@ -298,7 +305,8 @@ public class login extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main(String args[]) 
+    {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -323,8 +331,10 @@ public class login extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
+        java.awt.EventQueue.invokeLater(new Runnable() 
+        {
+            public void run() 
+            {
                 new login().setVisible(true);
             }
         });

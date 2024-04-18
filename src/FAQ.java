@@ -11,7 +11,13 @@ import javax.swing.JOptionPane;
  * @author maria
  */
 public class FAQ extends javax.swing.JFrame {
-
+    public static String username;
+    
+    FAQ(String username)
+    {
+        this();
+        this.username=username;
+    }  
     /**
      * Creates new form FAQ
      */
@@ -199,7 +205,8 @@ public class FAQ extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FAQ().setVisible(true);
+                String username = "Maria"; // Αντικαταστήστε με το όνομα του συνδεδεμένου χρήστη
+                new FAQ(username).setVisible(true);
             }
         });
     }

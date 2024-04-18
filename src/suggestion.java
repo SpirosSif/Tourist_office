@@ -11,7 +11,13 @@ import javax.swing.JOptionPane;
  * @author Μαρία
  */
 public class suggestion extends javax.swing.JFrame {
-
+    public static String username;
+    
+   suggestion(String username)
+    {
+        this();
+        this.username=username;
+    }  
     /**
      * Creates new form suggestion
      */
@@ -294,7 +300,7 @@ public class suggestion extends javax.swing.JFrame {
 
     private void profileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profileMouseClicked
         // TODO add your handling code here:
-        profile p1 = new profile();
+        profile p1 = new profile(username);
         p1.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_profileMouseClicked
@@ -329,7 +335,8 @@ public class suggestion extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new suggestion().setVisible(true);
+                String username = "Maria"; // Αντικαταστήστε με το όνομα του συνδεδεμένου χρήστη
+                new suggestion(username).setVisible(true);
             }
         });
     }

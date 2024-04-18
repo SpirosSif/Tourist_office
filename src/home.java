@@ -11,6 +11,13 @@ import javax.swing.JOptionPane;
  * @author spiro
  */
 public class home extends javax.swing.JFrame {
+    public static String username;
+    
+    home(String username)
+    {
+        this();
+        this.username=username;
+    }    
 
     /**
      * Creates new form home
@@ -192,7 +199,8 @@ public class home extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new home().setVisible(true);
+                String username = "Maria"; // Αντικαταστήστε με το όνομα του συνδεδεμένου χρήστη
+                new home(username).setVisible(true);
             }
         });
     }

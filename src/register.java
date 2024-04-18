@@ -15,7 +15,13 @@ import javax.swing.JOptionPane;
  * @author maria
  */
 public class register extends javax.swing.JFrame {
-
+    public static String username;
+    
+   register(String username)
+    {
+        this();
+        this.username=username;
+    }  
     /**
      * Creates new form register
      */
@@ -240,7 +246,8 @@ public class register extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new register().setVisible(true);
+                String username = "Maria"; // Αντικαταστήστε με το όνομα του συνδεδεμένου χρήστη
+                new register(username).setVisible(true);
             }
         });
     }

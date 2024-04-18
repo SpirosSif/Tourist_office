@@ -1,7 +1,3 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 /*
@@ -15,29 +11,13 @@ import javax.swing.JOptionPane;
  */
 public class profile extends javax.swing.JFrame 
 {
-    public String username;
-    public profile(String username) {
-        
- Connection myconnection;
-        this.username= username;
-        initComponents();
-        //String username1 = getUsernameFromDatabase(username);
-        usernamel.setText("Welcome " + username + "!");
-         try {
-         Class.forName("com.mysql.jdbc.Driver");
-                String url ="jdbc:mysql://localhost/touristoffice";
-                String user1 = "root";
-                String password1 = "";
-                myconnection = DriverManager.getConnection(url,user1,password1);
-                if (myconnection != null)
-                System.out.println("Connected to the database touristoffice");
-                Statement stm=myconnection.createStatement();
-                ResultSet rs = stm.executeQuery("select username from customers");
-               // return username;
-        } catch(Exception e)
-            {
-                System.out.println("e");
-            }
+    public static String username;
+    
+    profile(String username)
+    {
+        this();
+        this.username=username;
+         usernamel.setText("Welcome "+username+"!");   
     }           
 
     
@@ -249,8 +229,9 @@ public class profile extends javax.swing.JFrame
      */
  public static void main(String args[]) {
     java.awt.EventQueue.invokeLater(new Runnable() {
-        public void run() {
-            String username = "Maria"; // Αντικαταστήστε με το όνομα του συνδεδεμένου χρήστη
+        public void run() 
+        {
+           String username = "Maria"; // Αντικαταστήστε με το όνομα του συνδεδεμένου χρήστη
             new profile(username).setVisible(true);
         }
     });
