@@ -252,7 +252,6 @@ public class login extends javax.swing.JFrame
                             suggestion s1 = new suggestion(userName);
                           s1.setVisible(true);
                          this.setVisible(false);
-                        //new profile(user_name).setVisible(true);
                        
                     }
                     else
