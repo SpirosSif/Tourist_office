@@ -51,6 +51,7 @@ public class login extends javax.swing.JFrame {
         suggestion = new javax.swing.JMenu();
         about_us = new javax.swing.JMenu();
         FAQ = new javax.swing.JMenu();
+        profile = new javax.swing.JMenu();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -213,6 +214,14 @@ public class login extends javax.swing.JFrame {
         });
         jMenuBar1.add(FAQ);
 
+        profile.setText("Profile");
+        profile.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                profileMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(profile);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -366,6 +375,13 @@ public class login extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_suggestionMouseClicked
 
+    private void profileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profileMouseClicked
+        // TODO add your handling code here:
+        profile p1=new profile();
+        p1.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_profileMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -418,6 +434,7 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JMenu profile;
     private javax.swing.JMenu register;
     private javax.swing.JMenu reservation;
     private javax.swing.JMenu suggestion;

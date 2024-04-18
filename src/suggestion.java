@@ -52,6 +52,7 @@ public class suggestion extends javax.swing.JFrame {
         suggestion = new javax.swing.JMenu();
         about_us = new javax.swing.JMenu();
         FAQ = new javax.swing.JMenu();
+        profile = new javax.swing.JMenu();
 
         jLabel5.setIcon(new javax.swing.JLabel() {
             public javax.swing.Icon getIcon() {
@@ -70,7 +71,6 @@ public class suggestion extends javax.swing.JFrame {
         jTextArea2.setBackground(new java.awt.Color(204, 102, 0));
         jTextArea2.setColumns(20);
         jTextArea2.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
-        jTextArea2.setForeground(new java.awt.Color(0, 0, 0));
         jTextArea2.setLineWrap(true);
         jTextArea2.setRows(5);
         jTextArea2.setText("1) Κωνσταντινούπολη:\n\n*Η ιστορική πόλη που ενώνει την Ασία και την Ευρώπη.\n*Η Σοφία, η Μπλε Τζαμία, και το Κάστρο του Tοπκαπί είναι μερικά από τα κύρια αξιοθέατα.\n*Η γαστρονομία και η νυχτερινή ζωή είναι εξαιρετικές.\n\n2)Καππαδοκία:\n\n*Φημισμένη για τους πανέμορφους βράχους και τις σπηλιές της.\n*Τα αέρινα αγάλματα της φύσης στο Göreme National Park είναι εντυπωσιακά.\n*Το άνω και κάτω Αβσαλόν είναι χωριά με παραδοσιακή αρχιτεκτονική.\n\n3)Αντάλια:\n\n*Μια όμορφη παραθαλάσσια πόλη με λευκά κτίρια και καταγάλανα νερά.\n*Η παραλία Κλεοπάτρας είναι εκπληκτική με λευκή άμμο.\n*Τα αρχαιολογικά τοπία του Ασπενδούς και του Περγάμου είναι ενδιαφέροντα.\n\n4)Παμφυλία:\n\n*Μια περιοχή με φανταστικά τοπία, όπως το Φαράγγι του Σάκλικεντζε και το Φαράγγι του Γκέυτσιν.\n*Η πόλη Αντάνια είναι γνωστή για τα αρχαία χαμάμ και την πολιτιστική κληρονομιά.\n*Το Στόμα του Ακσού, όπου ο ποταμός συναντά τη θάλασσα, είναι μια εκπληκτική τοποθεσία.");
@@ -97,7 +97,6 @@ public class suggestion extends javax.swing.JFrame {
         jTextArea1.setBackground(new java.awt.Color(51, 153, 255));
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
-        jTextArea1.setForeground(new java.awt.Color(0, 0, 0));
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
         jTextArea1.setText("1) Ρίο ντε Τζανέιρο:\n*Φημισμένο για τις παραλίες του, όπως η Copacabana και η Ipanema.\n*Το Σαν Χριστόφορο, με το εμβληματικό Σταυρό του Κορκοβάνα.\n*Το Καρναβάλι της Ρίο, ένα από τα μεγαλύτερα και διάσημα καρναβάλια στον κόσμο.\n\n2) Σάο Πάολο:\n*Η μεγαλύτερη πόλη της Βραζιλίας με δυναμική πολιτιστική σκηνή και εξαιρετική νυχτερινή ζωή.\n*Το Μουσείο Τέχνης της Σάο Πάολο (MASP) είναι ένα από τα σημαντικότερα μουσεία της Λατινικής Αμερικής.\n\n3) Ιγκουασού:\n*Οι καταρράκτες Ιγκουασού, που βρίσκονται στα σύνορα μεταξύ Βραζιλίας και Αργεντινής, είναι μια από τις εντυπωσιακότερες φυσικές ομορφιές του κόμσου.\n\n4) Σαλβαδόρ:\n*Η πρωτεύουσα του Βραζιλιάνικου κράτους της Μπαχίας, γνωστή για το ιστορικό της κέντρο, το Pelourinho.\n*Οι παραλίες της, όπως η Porto da Barra, είναι εξαιρετικές για χαλάρωση.");
@@ -139,7 +138,6 @@ public class suggestion extends javax.swing.JFrame {
         jTextArea3.setBackground(new java.awt.Color(153, 102, 0));
         jTextArea3.setColumns(20);
         jTextArea3.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
-        jTextArea3.setForeground(new java.awt.Color(0, 0, 0));
         jTextArea3.setLineWrap(true);
         jTextArea3.setRows(5);
         jTextArea3.setText("1) Παρίσι:\n*Η πρωτεύουσα της Γαλλίας, γνωστή για τον Πύργο του Άιφελ, τον Λούβρο, το Παρίσι Σαιν-Ζερμέν, και το Μουσείο Ορσέ.\n*Οι λεωφόροι, οι κήποι, και ο ρομαντικός ποταμός Σηκουάνα καθιστούν την πόλη μοναδική.\n\n2) Λυών:\n*Γνωστή ως \"Η Πόλη των Φώτων,\" η Λυών προσφέρει εκλεπτυσμένη αρχιτεκτονική και καταπληκτική γαστρονομία.\n*Ο καθεδρικός ναός του Σαιν-Ζαν-Βατίστ και τα Τρικόρντ Επτά Ράτσια είναι αξιοθέατα.\n\n3) Νίκαια:\n*Τοποθετημένη στη Ριβιέρα της Γαλλίας, η Νίκαια προσφέρει όμορφες παραλίες και λαμπερή νυχτερινή ζωή.\n*Το Προμενάντ και το Μουσείο Μασσηλία είναι κορυφαία αξιοθέατα.\n\n4) Βερσαλλίες:\n*Γνωστή για το Παλάτι της Βερσαλλίας, ένα από τα μεγαλύτερα παλάτια στον κόσμο.\n*Οι καταπράσινοι κήποι και οι πλούσιες αρχιτεκτονικές λεπτομέρειες καθιστούν την περιοχή εντυπωσιακή.");
@@ -149,7 +147,6 @@ public class suggestion extends javax.swing.JFrame {
         jTextArea4.setBackground(new java.awt.Color(204, 102, 0));
         jTextArea4.setColumns(20);
         jTextArea4.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
-        jTextArea4.setForeground(new java.awt.Color(0, 0, 0));
         jTextArea4.setLineWrap(true);
         jTextArea4.setRows(5);
         jTextArea4.setText("1) Κωνσταντινούπολη:\n*Η ιστορική πόλη που ενώνει την Ασία και την Ευρώπη.\n*Η Σοφία, η Μπλε Τζαμία, και το Κάστρο του Tοπκαπί είναι μερικά από τα κύρια αξιοθέατα.\n*Η γαστρονομία και η νυχτερινή ζωή είναι εξαιρετικές.\n\n2)Καππαδοκία:\n*Φημισμένη για τους πανέμορφους βράχους και τις σπηλιές της.\n*Τα αέρινα αγάλματα της φύσης στο Göreme National Park είναι εντυπωσιακά.\n*Το άνω και κάτω Αβσαλόν είναι χωριά με παραδοσιακή αρχιτεκτονική.\n\n3)Αντάλια:\n*Μια όμορφη παραθαλάσσια πόλη με λευκά κτίρια και καταγάλανα νερά.\n*Η παραλία Κλεοπάτρας είναι εκπληκτική με λευκή άμμο.\n*Τα αρχαιολογικά τοπία του Ασπενδούς και του Περγάμου είναι ενδιαφέροντα.\n\n4)Παμφυλία:\n*Μια περιοχή με φανταστικά τοπία, όπως το Φαράγγι του Σάκλικεντζε και το Φαράγγι του Γκέυτσιν.\n*Η πόλη Αντάνια είναι γνωστή για τα αρχαία χαμάμ και την πολιτιστική κληρονομιά.\n*Το Στόμα του Ακσού, όπου ο ποταμός συναντά τη θάλασσα, είναι μια εκπληκτική τοποθεσία.");
@@ -192,10 +189,8 @@ public class suggestion extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -267,6 +262,14 @@ public class suggestion extends javax.swing.JFrame {
         });
         jMenuBar1.add(FAQ);
 
+        profile.setText("Profile");
+        profile.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                profileMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(profile);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -321,6 +324,13 @@ public class suggestion extends javax.swing.JFrame {
         log1.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_loginMouseClicked
+
+    private void profileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profileMouseClicked
+        // TODO add your handling code here:
+        profile p1=new profile();
+        p1.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_profileMouseClicked
 
     /**
      * @param args the command line arguments
@@ -380,6 +390,7 @@ public class suggestion extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextArea jTextArea4;
     private javax.swing.JMenu login;
+    private javax.swing.JMenu profile;
     private javax.swing.JMenu reservation;
     private javax.swing.JMenu suggestion;
     // End of variables declaration//GEN-END:variables

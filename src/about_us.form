@@ -13,6 +13,16 @@
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="homeMouseClicked"/>
           </Events>
+          <SubComponents>
+            <Menu class="javax.swing.JMenu" name="FAQ">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="FAQ"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="FAQMouseClicked"/>
+              </Events>
+            </Menu>
+          </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="login">
           <Properties>
@@ -51,12 +61,20 @@
             <Property name="text" type="java.lang.String" value="&#x3a3;&#x3c7;&#x3b5;&#x3c4;&#x3b9;&#x3ba;&#x3ac; &#x3bc;&#x3b5; &#x3b5;&#x3bc;&#x3ac;&#x3c2;"/>
           </Properties>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="FAQ">
+        <Menu class="javax.swing.JMenu" name="FAQ1">
           <Properties>
             <Property name="text" type="java.lang.String" value="FAQ"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="FAQMouseClicked"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="FAQ1MouseClicked"/>
+          </Events>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="profile">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Profile"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="profileMouseClicked"/>
           </Events>
         </Menu>
       </SubComponents>

@@ -47,6 +47,7 @@ public class reservation extends javax.swing.JFrame {
         sugg = new javax.swing.JMenu();
         about_us = new javax.swing.JMenu();
         FAQ = new javax.swing.JMenu();
+        profile = new javax.swing.JMenu();
 
         jScrollPane1.setViewportView(jEditorPane1);
 
@@ -156,6 +157,14 @@ public class reservation extends javax.swing.JFrame {
         });
         jMenuBar1.add(FAQ);
 
+        profile.setText("Profile");
+        profile.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                profileMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(profile);
+
         setJMenuBar(jMenuBar1);
 
         pack();
@@ -236,6 +245,7 @@ public class reservation extends javax.swing.JFrame {
                                 e.printStackTrace();
                             }
                             JOptionPane.showMessageDialog(null, "Η θέση κρατήθηκε");
+                            
                         } else {
                             JOptionPane.showMessageDialog(null, "Η κράτηση ακυρώθηκε");
                             System.exit(0);
@@ -331,6 +341,13 @@ public class reservation extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_from1ActionPerformed
 
+    private void profileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profileMouseClicked
+        // TODO add your handling code here:
+        profile p1=new profile();
+        p1.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_profileMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -379,6 +396,7 @@ public class reservation extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JMenu login;
+    private javax.swing.JMenu profile;
     private javax.swing.JMenu register;
     private javax.swing.JMenu reserv;
     private javax.swing.JButton search;

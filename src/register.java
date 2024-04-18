@@ -53,6 +53,7 @@ public class register extends javax.swing.JFrame {
         tips = new javax.swing.JMenu();
         about_us = new javax.swing.JMenu();
         FAQ = new javax.swing.JMenu();
+        profile = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,11 +92,11 @@ public class register extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 481, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 536, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 359, Short.MAX_VALUE)
         );
 
         home.setText("Αρχική");
@@ -153,6 +154,14 @@ public class register extends javax.swing.JFrame {
             }
         });
         jMenuBar1.add(FAQ);
+
+        profile.setText("Profile");
+        profile.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                profileMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(profile);
 
         setJMenuBar(jMenuBar1);
 
@@ -271,6 +280,13 @@ public class register extends javax.swing.JFrame {
         f1.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_FAQMouseClicked
+
+    private void profileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profileMouseClicked
+        // TODO add your handling code here:
+        profile p1=new profile();
+        p1.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_profileMouseClicked
                               
 
     /**
@@ -327,6 +343,7 @@ public class register extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JMenu login;
+    private javax.swing.JMenu profile;
     private javax.swing.JMenu register;
     private javax.swing.JMenu reservation;
     private javax.swing.JMenu tips;

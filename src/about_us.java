@@ -36,12 +36,14 @@ public class about_us extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         jMenuBar1 = new javax.swing.JMenuBar();
         home = new javax.swing.JMenu();
+        FAQ = new javax.swing.JMenu();
         login = new javax.swing.JMenu();
         register = new javax.swing.JMenu();
         reservation = new javax.swing.JMenu();
         tips = new javax.swing.JMenu();
         about_us = new javax.swing.JMenu();
-        FAQ = new javax.swing.JMenu();
+        FAQ1 = new javax.swing.JMenu();
+        profile = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -94,6 +96,15 @@ public class about_us extends javax.swing.JFrame {
                 homeMouseClicked(evt);
             }
         });
+
+        FAQ.setText("FAQ");
+        FAQ.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                FAQMouseClicked(evt);
+            }
+        });
+        home.add(FAQ);
+
         jMenuBar1.add(home);
 
         login.setText("Σύνδεση");
@@ -131,13 +142,21 @@ public class about_us extends javax.swing.JFrame {
         about_us.setText("Σχετικά με εμάς");
         jMenuBar1.add(about_us);
 
-        FAQ.setText("FAQ");
-        FAQ.addMouseListener(new java.awt.event.MouseAdapter() {
+        FAQ1.setText("FAQ");
+        FAQ1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                FAQMouseClicked(evt);
+                FAQ1MouseClicked(evt);
             }
         });
-        jMenuBar1.add(FAQ);
+        jMenuBar1.add(FAQ1);
+
+        profile.setText("Profile");
+        profile.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                profileMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(profile);
 
         setJMenuBar(jMenuBar1);
 
@@ -195,10 +214,24 @@ public class about_us extends javax.swing.JFrame {
 
     private void FAQMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FAQMouseClicked
         // TODO add your handling code here:
-         FAQ f1 = new FAQ();
+        FAQ f1 = new FAQ();
         f1.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_FAQMouseClicked
+
+    private void profileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profileMouseClicked
+        // TODO add your handling code here:
+        profile p1=new profile();
+        p1.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_profileMouseClicked
+
+    private void FAQ1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FAQ1MouseClicked
+        // TODO add your handling code here:
+        FAQ f1 = new FAQ();
+        f1.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_FAQ1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -237,6 +270,7 @@ public class about_us extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu FAQ;
+    private javax.swing.JMenu FAQ1;
     private javax.swing.JMenu about_us;
     private javax.swing.JMenu home;
     private javax.swing.JColorChooser jColorChooser1;
@@ -247,6 +281,7 @@ public class about_us extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JMenu login;
+    private javax.swing.JMenu profile;
     private javax.swing.JMenu register;
     private javax.swing.JMenu reservation;
     private javax.swing.JMenu tips;

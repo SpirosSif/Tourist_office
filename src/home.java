@@ -50,6 +50,7 @@ public class home extends javax.swing.JFrame {
         sugg = new javax.swing.JMenu();
         aboutus = new javax.swing.JMenu();
         faq = new javax.swing.JMenu();
+        profile = new javax.swing.JMenu();
 
         jMenu3.setText("File");
         jMenuBar2.add(jMenu3);
@@ -192,6 +193,14 @@ public class home extends javax.swing.JFrame {
         });
         jMenuBar1.add(faq);
 
+        profile.setText("Profile");
+        profile.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                profileMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(profile);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -275,6 +284,13 @@ public class home extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1MouseClicked
 
+    private void profileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profileMouseClicked
+        profile p1=new profile();
+        p1.setVisible(true);
+        this.setVisible(false);
+// TODO add your handling code here:
+    }//GEN-LAST:event_profileMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -329,6 +345,7 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JMenu login;
+    private javax.swing.JMenu profile;
     private javax.swing.JButton reservation;
     private javax.swing.JMenu reservations;
     private javax.swing.JMenu signup;
