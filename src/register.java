@@ -32,6 +32,8 @@ public class register extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Back = new javax.swing.JButton();
+        Back1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -45,7 +47,22 @@ public class register extends javax.swing.JFrame {
         Surname = new javax.swing.JTextField();
         Email = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
+        Back2 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
+
+        Back.setText("Back");
+        Back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackActionPerformed(evt);
+            }
+        });
+
+        Back1.setText("Back");
+        Back1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Back1ActionPerformed(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -79,6 +96,19 @@ public class register extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, -1, -1));
+
+        Back2.setText("Back");
+        Back2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Back2MouseClicked(evt);
+            }
+        });
+        Back2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Back2ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(Back2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, -1, -1));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -158,6 +188,26 @@ public class register extends javax.swing.JFrame {
         }
     }
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void BackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BackActionPerformed
+
+    private void Back1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Back1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Back1ActionPerformed
+
+    private void Back2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Back2MouseClicked
+        // TODO add your handling code here:
+        home h1 = new home();
+        h1.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_Back2MouseClicked
+
+    private void Back2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Back2ActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_Back2ActionPerformed
                                 
 
     /**
@@ -196,6 +246,9 @@ public class register extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Back;
+    private javax.swing.JButton Back1;
+    private javax.swing.JButton Back2;
     private javax.swing.JTextField Email;
     private javax.swing.JTextField Name;
     private javax.swing.JPasswordField Password;

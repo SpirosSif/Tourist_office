@@ -136,10 +136,10 @@ public class FAQ extends javax.swing.JFrame {
 
     private void reservationMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reservationMouseClicked
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "You have to register or login");
-//        reservation r1 = new reservation();
-//        r1.setVisible(true);
-//        this.setVisible(false);
+       // JOptionPane.showMessageDialog(null, "You have to register or login");
+         reservation r1 = new reservation();
+         r1.setVisible(true);
+         this.setVisible(false);
     }//GEN-LAST:event_reservationMouseClicked
 
     private void tipsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tipsMouseClicked
@@ -163,7 +163,10 @@ public class FAQ extends javax.swing.JFrame {
 
     private void profileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profileMouseClicked
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "You have to register or login");
+        //JOptionPane.showMessageDialog(null, "You have to register or login");
+        profile p1=new profile();
+        p1.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_profileMouseClicked
 
     /**
