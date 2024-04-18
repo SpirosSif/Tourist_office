@@ -233,7 +233,6 @@ public class login extends javax.swing.JFrame
                 if (myconnection != null)
                 System.out.println("Connected to the database touristoffice");
                 Statement stm=myconnection.createStatement();
-                //ResultSet rs = stm.executeQuery("select username from customers where email = ?");
                 PreparedStatement preparedStatement = myconnection.prepareStatement("select * from customers where email = ?");
                 preparedStatement.setString(1, UserName.getText());
                ResultSet rs = preparedStatement.executeQuery();
