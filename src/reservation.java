@@ -40,11 +40,8 @@ public class reservation extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         from1 = new javax.swing.JComboBox<>();
         jMenuBar1 = new javax.swing.JMenuBar();
-        home = new javax.swing.JMenu();
-        login = new javax.swing.JMenu();
-        register = new javax.swing.JMenu();
-        reserv = new javax.swing.JMenu();
         sugg = new javax.swing.JMenu();
+        reserv = new javax.swing.JMenu();
         about_us = new javax.swing.JMenu();
         FAQ = new javax.swing.JMenu();
         profile = new javax.swing.JMenu();
@@ -99,38 +96,6 @@ public class reservation extends javax.swing.JFrame {
         });
         getContentPane().add(from1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 390, 60));
 
-        home.setText("Αρχική");
-        home.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                homeMouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(home);
-
-        login.setText("Σύνδεση");
-        login.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                loginMouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(login);
-
-        register.setText("Εγγραφή");
-        register.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                registerMouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(register);
-
-        reserv.setText("Κρατήσεις");
-        reserv.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                reservMouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(reserv);
-
         sugg.setText("Προτάσεις");
         sugg.setActionCommand("sugg");
         sugg.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -140,6 +105,14 @@ public class reservation extends javax.swing.JFrame {
         });
         jMenuBar1.add(sugg);
         sugg.getAccessibleContext().setAccessibleName("sugg");
+
+        reserv.setText("Κρατήσεις");
+        reserv.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                reservMouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(reserv);
 
         about_us.setText("About Us");
         about_us.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -266,18 +239,6 @@ public class reservation extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_searchActionPerformed
 
-    private void registerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerMouseClicked
-        register r1=new register();
-        r1.setVisible(true);        // TODO add your handling code here:
-        this.setVisible(false);
-    }//GEN-LAST:event_registerMouseClicked
-
-    private void homeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeMouseClicked
-        home home1 = new home();
-        home1.setVisible(true);        
-        this.setVisible(false);        // TODO add your handling code here:
-    }//GEN-LAST:event_homeMouseClicked
-
     private void FAQMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FAQMouseClicked
         // TODO add your handling code here:
         FAQ f1 = new FAQ();
@@ -305,13 +266,6 @@ public class reservation extends javax.swing.JFrame {
         res1.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_reservMouseClicked
-
-    private void loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseClicked
-        // TODO add your handling code here:
-        login login1= new login();
-        login1.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_loginMouseClicked
 
     private void from1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_from1ActionPerformed
         // TODO add your handling code here:
@@ -388,16 +342,13 @@ public class reservation extends javax.swing.JFrame {
     private javax.swing.JMenu about_us;
     private javax.swing.JTextField frm;
     private javax.swing.JComboBox<String> from1;
-    private javax.swing.JMenu home;
     private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JMenu login;
     private javax.swing.JMenu profile;
-    private javax.swing.JMenu register;
     private javax.swing.JMenu reserv;
     private javax.swing.JButton search;
     private javax.swing.JMenu sugg;
