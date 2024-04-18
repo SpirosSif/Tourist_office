@@ -13,5 +13,10 @@ Our application, Tourist Office, comprises the following pages: home page, login
   
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
+![Home Screenshot](src/screenshots/home_page.png)
+![Login Screenshot](src/screenshots/login_page.png)
+![Register Screenshot](src/screenshots/register_page.png)
+![Reservation Screenshot](src/screenshots/reservation_page.png)
+![Suggestion Screenshot](src/screenshots/suggestions.png)
+![About_Us Screenshot](src/screenshots/about_us.png)
+![FAQ Screenshot](src/screenshots/FAQ.png)
