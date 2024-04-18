@@ -46,10 +46,8 @@ public class suggestion extends javax.swing.JFrame {
         jTextArea4 = new javax.swing.JTextArea();
         jLabel8 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        home = new javax.swing.JMenu();
-        login = new javax.swing.JMenu();
-        reservation = new javax.swing.JMenu();
         suggestion = new javax.swing.JMenu();
+        reservation = new javax.swing.JMenu();
         about_us = new javax.swing.JMenu();
         FAQ = new javax.swing.JMenu();
         profile = new javax.swing.JMenu();
@@ -219,21 +217,8 @@ public class suggestion extends javax.swing.JFrame {
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
         );
 
-        home.setText("Αρχική");
-        home.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                homeMouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(home);
-
-        login.setText("Σύνδεση");
-        login.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                loginMouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(login);
+        suggestion.setText("Προτάσεις");
+        jMenuBar1.add(suggestion);
 
         reservation.setText("Κρατήσεις");
         reservation.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -242,9 +227,6 @@ public class suggestion extends javax.swing.JFrame {
             }
         });
         jMenuBar1.add(reservation);
-
-        suggestion.setText("Προτάσεις");
-        jMenuBar1.add(suggestion);
 
         about_us.setText("Σχετικά με εμάς");
         about_us.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -310,26 +292,9 @@ public class suggestion extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_FAQMouseClicked
 
-    private void homeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeMouseClicked
-        // TODO add your handling code here:
-        home home1=new home();
-        home1.setVisible(true);
-        this.setVisible(false);
-
-    }//GEN-LAST:event_homeMouseClicked
-
-    private void loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseClicked
-        // TODO add your handling code here:
-        login log1=new login();
-        log1.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_loginMouseClicked
-
     private void profileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profileMouseClicked
         // TODO add your handling code here:
-        profile p1=new profile();
-        p1.setVisible(true);
-        this.setVisible(false);
+        JOptionPane.showMessageDialog(null, "You have to register or login");
     }//GEN-LAST:event_profileMouseClicked
 
     /**
@@ -370,7 +335,6 @@ public class suggestion extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu FAQ;
     private javax.swing.JMenu about_us;
-    private javax.swing.JMenu home;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -389,7 +353,6 @@ public class suggestion extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextArea jTextArea4;
-    private javax.swing.JMenu login;
     private javax.swing.JMenu profile;
     private javax.swing.JMenu reservation;
     private javax.swing.JMenu suggestion;

@@ -33,24 +33,14 @@ public class home extends javax.swing.JFrame {
         jMenu4 = new javax.swing.JMenu();
         jMenu10 = new javax.swing.JMenu();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        register = new javax.swing.JButton();
         reservation = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        login = new javax.swing.JMenu();
-        signup = new javax.swing.JMenu();
-        reservations = new javax.swing.JMenu();
-        sugg = new javax.swing.JMenu();
-        aboutus = new javax.swing.JMenu();
-        faq = new javax.swing.JMenu();
-        profile = new javax.swing.JMenu();
 
         jMenu3.setText("File");
         jMenuBar2.add(jMenu3);
@@ -65,68 +55,53 @@ public class home extends javax.swing.JFrame {
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(new java.awt.Color(0, 153, 255));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Προορισμοί");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        register.setBackground(new java.awt.Color(0, 153, 255));
+        register.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        register.setForeground(new java.awt.Color(255, 255, 255));
+        register.setText("Εγγραφή");
+        register.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                registerMouseClicked(evt);
             }
         });
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        register.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                registerActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 360, 140, -1));
+        jPanel2.add(register, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 240, 140, -1));
 
         reservation.setBackground(new java.awt.Color(0, 153, 255));
         reservation.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         reservation.setForeground(new java.awt.Color(255, 255, 255));
-        reservation.setText("Κρατήσεις");
+        reservation.setText("Σύνδεση");
         reservation.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                reservationMouseClicked(evt);
+                loginMouseClicked(evt);
             }
         });
         reservation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                reservationActionPerformed(evt);
+                loginActionPerformed(evt);
             }
         });
-        jPanel2.add(reservation, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 220, 140, -1));
-
-        jTextField1.setEditable(false);
-        jTextField1.setBackground(new java.awt.Color(255, 204, 0));
-        jTextField1.setText("Για κρατήσεις παρακαλώ μεταβείτε στο μενού \"κρατήσεις\nή πατήστε το κουμπί \"κρατήσεις\" που θα βρείτε παρακάτω.\n");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 790, 130));
-
-        jTextField2.setEditable(false);
-        jTextField2.setBackground(new java.awt.Color(255, 204, 0));
-        jTextField2.setText("Για να σας προτείνουμε εμείς προορισμόυς ιδανικούς για εσάς πηγαίντε στο μενού \"προτάσεις\" ή πατήστε παρακάτω το κουμπί Προτάσεις.");
-        jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 790, 120));
+        jPanel2.add(reservation, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 240, 140, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setText("Καλώς ήρθατε στο ταξιδιωτικό μας γραφείο");
         jLabel1.setToolTipText("");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 310, 30));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, 310, 30));
 
         jLabel2.setText("Εξερευνήστε τους προορισμούς μας");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 208, 26));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 170, 208, 26));
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("και σχεδιάστε την επόμενη περιπέτειά σας!");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, -1, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, -1, -1));
 
         jTextField3.setEditable(false);
         jTextField3.setBackground(new java.awt.Color(153, 153, 255));
-        jPanel2.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 330, 80));
+        jPanel2.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, 360, 150));
 
         jLabel4.setIcon(new javax.swing.JLabel() {
             public javax.swing.Icon getIcon() {
@@ -140,66 +115,7 @@ public class home extends javax.swing.JFrame {
             }
         }.getIcon());
         jLabel4.setText("jLabel4");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 840, 430));
-
-        jMenu1.setText("Αρχική");
-        jMenuBar1.add(jMenu1);
-
-        login.setText("Σύνδεση");
-        login.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                loginMouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(login);
-
-        signup.setText("Εγγραφή");
-        signup.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                signupMouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(signup);
-
-        reservations.setLabel("Kρατήσεις");
-        reservations.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                reservationsMouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(reservations);
-
-        sugg.setText("Προτάσεις");
-        sugg.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                suggMouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(sugg);
-
-        aboutus.setText("About Us");
-        aboutus.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                aboutusMouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(aboutus);
-
-        faq.setText("FAQ");
-        faq.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                faqMouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(faq);
-
-        profile.setText("Profile");
-        profile.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                profileMouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(profile);
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 850, 440));
 
         setJMenuBar(jMenuBar1);
 
@@ -223,73 +139,28 @@ public class home extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void registerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_registerActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void reservationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reservationActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_reservationActionPerformed
-
-    private void reservationMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reservationMouseClicked
-//        reservation r1 = new reservation();        // TODO add your handling code here:
-//        r1.setVisible(true);
-          JOptionPane.showMessageDialog(null, "You have to register or login");
-//        this.setVisible(false);
-    }//GEN-LAST:event_reservationMouseClicked
-
-    private void signupMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signupMouseClicked
-        register reg1 = new register();        // TODO add your handling code here:
-        reg1.setVisible(true);
+    private void registerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerMouseClicked
+        register r1=new register();
+        r1.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_signupMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_registerMouseClicked
 
-    private void suggMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_suggMouseClicked
-        suggestion sugg1 = new suggestion();
-        sugg1.setVisible(true);
-        this.setVisible(false);        // TODO add your handling code here:
-    }//GEN-LAST:event_suggMouseClicked
-
-    private void aboutusMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aboutusMouseClicked
-        about_us ab = new about_us();
-        ab.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_aboutusMouseClicked
+    private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_loginActionPerformed
 
     private void loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseClicked
-        login log = new login();
-        log.setVisible(true);
+        // TODO add your handling code here:
+        login l1=new login();
+        l1.setVisible(true);
         this.setVisible(false);
+        
     }//GEN-LAST:event_loginMouseClicked
-
-    private void faqMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_faqMouseClicked
-            FAQ faq1 = new FAQ();
-            faq1.setVisible(true);
-            this.setVisible(false);
-    }//GEN-LAST:event_faqMouseClicked
-
-    private void reservationsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reservationsMouseClicked
-        // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "You have to register or login");
-    }//GEN-LAST:event_reservationsMouseClicked
-
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        suggestion sugg1=new suggestion();
-        sugg1.setVisible(true);
-        this.setVisible(false);
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1MouseClicked
-
-    private void profileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profileMouseClicked
-        profile p1=new profile();
-        p1.setVisible(true);
-        this.setVisible(false);
-// TODO add your handling code here:
-    }//GEN-LAST:event_profileMouseClicked
 
     /**
      * @param args the command line arguments
@@ -327,28 +198,18 @@ public class home extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu aboutus;
-    private javax.swing.JMenu faq;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu10;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
-    private javax.swing.JMenu login;
-    private javax.swing.JMenu profile;
+    private javax.swing.JButton register;
     private javax.swing.JButton reservation;
-    private javax.swing.JMenu reservations;
-    private javax.swing.JMenu signup;
-    private javax.swing.JMenu sugg;
     // End of variables declaration//GEN-END:variables
 }

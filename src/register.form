@@ -3,72 +3,6 @@
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
     <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
-      <SubComponents>
-        <Menu class="javax.swing.JMenu" name="home">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="&#x391;&#x3c1;&#x3c7;&#x3b9;&#x3ba;&#x3ae;"/>
-          </Properties>
-          <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="homeMouseClicked"/>
-          </Events>
-        </Menu>
-        <Menu class="javax.swing.JMenu" name="login">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="&#x3a3;&#x3cd;&#x3bd;&#x3b4;&#x3b5;&#x3c3;&#x3b7;"/>
-          </Properties>
-          <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="loginMouseClicked"/>
-          </Events>
-        </Menu>
-        <Menu class="javax.swing.JMenu" name="register">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="&#x395;&#x3b3;&#x3b3;&#x3c1;&#x3b1;&#x3c6;&#x3ae;"/>
-          </Properties>
-          <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="registerMouseClicked"/>
-          </Events>
-        </Menu>
-        <Menu class="javax.swing.JMenu" name="reservation">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="&#x39a;&#x3c1;&#x3b1;&#x3c4;&#x3ae;&#x3c3;&#x3b5;&#x3b9;&#x3c2;"/>
-          </Properties>
-          <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="reservationMouseClicked"/>
-          </Events>
-        </Menu>
-        <Menu class="javax.swing.JMenu" name="tips">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="&#x3a0;&#x3c1;&#x3bf;&#x3c4;&#x3ac;&#x3c3;&#x3b5;&#x3b9;&#x3c2;"/>
-          </Properties>
-          <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tipsMouseClicked"/>
-          </Events>
-        </Menu>
-        <Menu class="javax.swing.JMenu" name="about_us">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="&#x3a3;&#x3c7;&#x3b5;&#x3c4;&#x3b9;&#x3ba;&#x3ac; &#x3bc;&#x3b5; &#x3b5;&#x3bc;&#x3ac;&#x3c2;"/>
-          </Properties>
-          <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="about_usMouseClicked"/>
-          </Events>
-        </Menu>
-        <Menu class="javax.swing.JMenu" name="FAQ">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="FAQ"/>
-          </Properties>
-          <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="FAQMouseClicked"/>
-          </Events>
-        </Menu>
-        <Menu class="javax.swing.JMenu" name="profile">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Profile"/>
-          </Properties>
-          <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="profileMouseClicked"/>
-          </Events>
-        </Menu>
-      </SubComponents>
     </Menu>
   </NonVisualComponents>
   <Properties>
@@ -114,7 +48,7 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jPanel2" alignment="0" pref="359" max="32767" attributes="0"/>
+              <Component id="jPanel2" alignment="0" pref="381" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -183,35 +117,35 @@
             <Component class="javax.swing.JTextField" name="Name">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="12" y="44" width="376" height="-1"/>
+                  <AbsoluteConstraints x="12" y="44" width="430" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
             <Component class="javax.swing.JPasswordField" name="Password">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="10" y="260" width="376" height="-1"/>
+                  <AbsoluteConstraints x="10" y="260" width="430" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
             <Component class="javax.swing.JTextField" name="UserName">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="10" y="210" width="376" height="-1"/>
+                  <AbsoluteConstraints x="10" y="210" width="430" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
             <Component class="javax.swing.JTextField" name="Surname">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="12" y="100" width="376" height="-1"/>
+                  <AbsoluteConstraints x="12" y="100" width="430" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
             <Component class="javax.swing.JTextField" name="Email">
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="12" y="156" width="376" height="-1"/>
+                  <AbsoluteConstraints x="12" y="156" width="430" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>

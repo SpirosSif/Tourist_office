@@ -44,14 +44,6 @@ public class login extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         check = new javax.swing.JCheckBox();
         jMenuBar1 = new javax.swing.JMenuBar();
-        home = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
-        register = new javax.swing.JMenu();
-        reservation = new javax.swing.JMenu();
-        suggestion = new javax.swing.JMenu();
-        about_us = new javax.swing.JMenu();
-        FAQ = new javax.swing.JMenu();
-        profile = new javax.swing.JMenu();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -135,16 +127,16 @@ public class login extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 387, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(103, 103, 103))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(139, 139, 139))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(96, 96, 96)
+                .addGap(65, 65, 65)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(UserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -154,73 +146,15 @@ public class login extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel4)
                         .addComponent(check)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(68, 68, 68)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(41, Short.MAX_VALUE))
         );
-
-        home.setText("Αρχική");
-        home.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                homeMouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(home);
-
-        jMenu2.setText("Σύνδεση");
-        jMenuBar1.add(jMenu2);
-
-        register.setText("Εγγραφή");
-        register.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                registerMouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(register);
-
-        reservation.setText("Κρατήσεις");
-        reservation.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                reservationMouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(reservation);
-
-        suggestion.setText("Προτάσεις");
-        suggestion.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                suggestionMouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(suggestion);
-
-        about_us.setText("Σχετικά με εμάς");
-        about_us.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                about_usMouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(about_us);
-
-        FAQ.setText("FAQ");
-        FAQ.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                FAQMouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(FAQ);
-
-        profile.setText("Profile");
-        profile.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                profileMouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(profile);
 
         setJMenuBar(jMenuBar1);
 
@@ -247,15 +181,6 @@ public class login extends javax.swing.JFrame {
         // TODO add your handling code here:
         Password.setText(""); 
     }//GEN-LAST:event_PasswordFocusGained
-
-    private void homeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeMouseClicked
-        // TODO add your handling code here:
-        home home=new home();
-        home.setVisible(true);
-         this.setVisible(false);
-        
-        
-    }//GEN-LAST:event_homeMouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -298,9 +223,10 @@ public class login extends javax.swing.JFrame {
                     {
                         found=true;
                         msg="User name and password are correct";
-                        reservation r1 = new reservation();
-                        r1.setVisible(true);
+                        suggestion s1 = new suggestion();
+                        s1.setVisible(true);
                         this.setVisible(false);
+                        
                     }
                     else
                     {
@@ -321,28 +247,6 @@ public class login extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void reservationMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reservationMouseClicked
-        // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "You have to register or login");
-//        reservation reservation=new reservation();
-//        reservation.setVisible(true);
-//         this.setVisible(false);
-    }//GEN-LAST:event_reservationMouseClicked
-
-    private void about_usMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_about_usMouseClicked
-        // TODO add your handling code here: 
-        about_us about_us=new about_us();
-        about_us.setVisible(true);
-         this.setVisible(false);
-    }//GEN-LAST:event_about_usMouseClicked
-
-    private void FAQMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FAQMouseClicked
-        // TODO add your handling code here:
-        FAQ FAQ=new FAQ();
-        FAQ.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_FAQMouseClicked
-
     private void checkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkActionPerformed
         // TODO add your handling code here:
         if(check.isSelected())
@@ -358,29 +262,6 @@ public class login extends javax.swing.JFrame {
     private void PasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_PasswordActionPerformed
-
-    private void registerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerMouseClicked
-        // TODO add your handling code here:
-       
-        register register=new register();
-        register.setVisible(true);
-        this.setVisible(false);
-        
-    }//GEN-LAST:event_registerMouseClicked
-
-    private void suggestionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_suggestionMouseClicked
-        // TODO add your handling code here:
-        suggestion  suggestion=new suggestion();
-        suggestion.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_suggestionMouseClicked
-
-    private void profileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profileMouseClicked
-        // TODO add your handling code here:
-        profile p1=new profile();
-        p1.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_profileMouseClicked
 
     /**
      * @param args the command line arguments
@@ -418,25 +299,17 @@ public class login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu FAQ;
     private javax.swing.JPasswordField Password;
     private javax.swing.JTextField UserName;
-    private javax.swing.JMenu about_us;
     private javax.swing.JCheckBox check;
-    private javax.swing.JMenu home;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JMenu profile;
-    private javax.swing.JMenu register;
-    private javax.swing.JMenu reservation;
-    private javax.swing.JMenu suggestion;
     // End of variables declaration//GEN-END:variables
 }
