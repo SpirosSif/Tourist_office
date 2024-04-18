@@ -185,37 +185,46 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="792" max="32767" attributes="0"/>
-              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="273" max="-2" attributes="0"/>
-                      <Component id="jLabel2" min="-2" pref="245" max="-2" attributes="0"/>
-                      <EmptySpace pref="274" max="32767" attributes="0"/>
-                  </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="291" max="-2" attributes="0"/>
+                  <Component id="usernamel" min="-2" pref="184" max="-2" attributes="0"/>
+                  <EmptySpace pref="317" max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="log_out" min="-2" pref="167" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="465" max="32767" attributes="0"/>
-              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                      <Component id="jLabel2" min="-2" pref="53" max="-2" attributes="0"/>
-                      <EmptySpace pref="374" max="32767" attributes="0"/>
-                  </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
+                  <Component id="usernamel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="240" max="32767" attributes="0"/>
+                  <Component id="log_out" min="-2" pref="54" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="usernamel">
           <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="18" style="3"/>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="66" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="&#x39a;&#x3b1;&#x3bb;&#x3c9;&#x3c3;&#x3cc;&#x3c1;&#x3b9;&#x3c3;&#x3b5;&#x3c2; "/>
+            <Property name="text" type="java.lang.String" value="jLabel3"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="log_out">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Log out"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="log_outActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
