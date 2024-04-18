@@ -272,10 +272,10 @@ public class suggestion extends javax.swing.JFrame {
 
     private void reservationMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reservationMouseClicked
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "You have to register or login");
-//        reservation res1=new reservation();
-//        res1.setVisible(true);
-//        this.setVisible(false);
+        //JOptionPane.showMessageDialog(null, "You have to register or login");
+        reservation res1=new reservation();
+        res1.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_reservationMouseClicked
 
     private void about_usMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_about_usMouseClicked
@@ -294,7 +294,9 @@ public class suggestion extends javax.swing.JFrame {
 
     private void profileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profileMouseClicked
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "You have to register or login");
+        profile p1 = new profile();
+        p1.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_profileMouseClicked
 
     /**
