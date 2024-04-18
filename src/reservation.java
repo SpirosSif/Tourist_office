@@ -189,7 +189,7 @@ public class reservation extends javax.swing.JFrame {
                         found2=true;
                     
                     if(found2==true && found1==true){
-                        reply = JOptionPane.showConfirmDialog(null, "Από Athens προς "+ country1 +" τo κόστος είναι " +cost+"E\nΘέλετε να προχωρήσετε σε κράτηση;", "Κράτηση", JOptionPane.YES_NO_OPTION);
+                        reply = JOptionPane.showConfirmDialog(null, "Από Athens προς "+ country1 +" τo κόστος είναι " +cost+"€\nΘέλετε να προχωρήσετε σε κράτηση;", "Κράτηση", JOptionPane.YES_NO_OPTION);
                         if (reply == JOptionPane.YES_OPTION) {
                             ps1=myconnection.prepareStatement("select av_seats from country  where pros=?");
                             ps1.setString(1,country1);
