@@ -16,11 +16,13 @@ import javax.swing.JOptionPane;
  */
 public class register extends javax.swing.JFrame {
     public static String username;
+   // public static int ID;
     
    register(String username)
     {
         this();
         this.username=username;
+        
     }  
     /**
      * Creates new form register
@@ -178,13 +180,24 @@ public class register extends javax.swing.JFrame {
             int rowsInserted = preparedStatement.executeUpdate();
             if (rowsInserted > 0) {
                 JOptionPane.showMessageDialog(null, "Successful data entry!");
-                suggestion s1 = new suggestion(Name.getText());
+                Statement stm=myconnection.createStatement();
+                PreparedStatement prepStatement = myconnection.prepareStatement("select * from customers where email = ?");
+                prepStatement.setString(1, Email.getText());
+                
+                ResultSet rs = prepStatement.executeQuery();
+                int ID=0;
+                while(rs.next())
+                {
+                    ID=rs.getInt(1);
+                }     
+                suggestion s1 = new suggestion(Name.getText(), ID);
                 s1.setVisible(true);
                 this.setVisible(false);
             } else {
                 JOptionPane.showMessageDialog(null, "Unsuccessful data entry!");
             }
-
+           
+                
             preparedStatement.close();
             myconnection.close();
        } catch (SQLException e) 
@@ -192,6 +205,8 @@ public class register extends javax.swing.JFrame {
             e.printStackTrace();
             JOptionPane.showMessageDialog(null, "Error while inserting data into database");
         }
+        
+        
     }
     }//GEN-LAST:event_jButton2ActionPerformed
 
