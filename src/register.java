@@ -178,7 +178,7 @@ public class register extends javax.swing.JFrame {
             int rowsInserted = preparedStatement.executeUpdate();
             if (rowsInserted > 0) {
                 JOptionPane.showMessageDialog(null, "Successful data entry!");
-                suggestion s1 = new suggestion();
+                suggestion s1 = new suggestion(Name.getText());
                 s1.setVisible(true);
                 this.setVisible(false);
             } else {
