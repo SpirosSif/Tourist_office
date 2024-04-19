@@ -13,7 +13,8 @@ import javax.swing.JOptionPane;
  * @author spiro
  */
 public class reservation extends javax.swing.JFrame {
-    public static int ID;
+    public int ID;
+    public int cid;
 
     /**
      * Creates new form reservation
@@ -186,7 +187,6 @@ public class reservation extends javax.swing.JFrame {
                 int av_seats=0;
                 PreparedStatement ps1;
                 ResultSet rs1;
-                int cid=0;
                 while(rs.next())
                 {
                     cid=rs.getInt(1);
@@ -323,7 +323,7 @@ public class reservation extends javax.swing.JFrame {
 
     private void profileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profileMouseClicked
         // TODO add your handling code here:
-        profile p1=new profile();
+        profile p1=new profile(cid,ID);
         p1.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_profileMouseClicked
