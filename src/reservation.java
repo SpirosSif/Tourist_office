@@ -13,12 +13,19 @@ import javax.swing.JOptionPane;
  * @author spiro
  */
 public class reservation extends javax.swing.JFrame {
+    public static int ID;
 
     /**
      * Creates new form reservation
      */
     public reservation() {
         initComponents();
+    }
+    
+    public reservation(int ID) {
+        this();
+        this.ID=ID;
+        
     }
 
     /**
@@ -179,8 +186,10 @@ public class reservation extends javax.swing.JFrame {
                 int av_seats=0;
                 PreparedStatement ps1;
                 ResultSet rs1;
+                int cid=0;
                 while(rs.next())
                 {
+                    cid=rs.getInt(1);
                     country1=rs.getString(2);
                     cost = rs.getFloat(3);
                     if(from.equals("Athens"))
@@ -216,9 +225,9 @@ public class reservation extends javax.swing.JFrame {
                             } catch (SQLException e) 
                             {
                                 e.printStackTrace();
-                            }
+                            }                           
                             JOptionPane.showMessageDialog(null, "Η θέση κρατήθηκε");
-                            
+                                                        
                         } else {
                             JOptionPane.showMessageDialog(null, "Η κράτηση ακυρώθηκε");
                             System.exit(0);
@@ -226,6 +235,23 @@ public class reservation extends javax.swing.JFrame {
                         break;
                     }
                 }
+                String insertQuery="insert into reservation(cid,id) values (?,?)";
+                try(PreparedStatement insertStatement=myconnection.prepareStatement(insertQuery))
+                {
+                    insertStatement.setInt(1,cid);
+                    insertStatement.setInt(2,ID);
+                   //System.out.println(cid + ID);
+                    int rowsAffected = insertStatement.executeUpdate();
+                    if (rowsAffected > 0) {
+                        System.out.println("Inserted successfully!");
+                    } else {
+                        System.out.println("No rows inserted.");
+                    }
+                }catch(SQLException e)
+                {
+                    e.printStackTrace();
+                }
+                
                 if(found1!=true || found2!=true){
                     JOptionPane.showMessageDialog(null,"There are no flights to that");
                 }

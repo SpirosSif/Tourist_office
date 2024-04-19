@@ -12,11 +12,13 @@ import javax.swing.JOptionPane;
 public class profile extends javax.swing.JFrame 
 {
     public static String username;
+    public static int ID;
     
-    profile(String username)
+    profile(String username, int ID)
     {
         this();
         this.username=username;
+        this.ID=ID;
          usernamel.setText("Welcome "+username+"!");   
     }           
 
@@ -232,7 +234,8 @@ public class profile extends javax.swing.JFrame
         public void run() 
         {
            String username = "Maria"; // Αντικαταστήστε με το όνομα του συνδεδεμένου χρήστη
-            new profile(username).setVisible(true);
+           int ID=0;
+            new profile(username,ID).setVisible(true);
         }
     });
     }

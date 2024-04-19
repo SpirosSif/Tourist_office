@@ -12,11 +12,20 @@ import javax.swing.JOptionPane;
  */
 public class suggestion extends javax.swing.JFrame {
     public static String username;
+    public static int ID; 
     
-   suggestion(String username)
+    suggestion(String username)
     {
         this();
         this.username=username;
+//        this.ID=ID;
+    } 
+    
+   suggestion(String username, int ID)
+    {
+        this();
+        this.username=username;
+        this.ID=ID;
     }  
     /**
      * Creates new form suggestion
@@ -279,7 +288,7 @@ public class suggestion extends javax.swing.JFrame {
     private void reservationMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reservationMouseClicked
         // TODO add your handling code here:
         //JOptionPane.showMessageDialog(null, "You have to register or login");
-        reservation res1=new reservation();
+        reservation res1=new reservation(ID);
         res1.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_reservationMouseClicked
@@ -300,7 +309,7 @@ public class suggestion extends javax.swing.JFrame {
 
     private void profileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profileMouseClicked
         // TODO add your handling code here:
-        profile p1 = new profile(username);
+        profile p1 = new profile(username,ID);
         p1.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_profileMouseClicked
@@ -336,7 +345,8 @@ public class suggestion extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 String username = "Maria"; // Αντικαταστήστε με το όνομα του συνδεδεμένου χρήστη
-                new suggestion(username).setVisible(true);
+                int ID =0; 
+                new suggestion(username,ID).setVisible(true);
             }
         });
     }

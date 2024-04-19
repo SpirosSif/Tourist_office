@@ -17,7 +17,7 @@ import java.sql.*;
  */
 public class login extends javax.swing.JFrame 
 {
-    
+  
     /**
      * Creates new form login
      */
@@ -235,10 +235,13 @@ public class login extends javax.swing.JFrame
                 Statement stm=myconnection.createStatement();
                 PreparedStatement preparedStatement = myconnection.prepareStatement("select * from customers where email = ?");
                 preparedStatement.setString(1, UserName.getText());
+                
                ResultSet rs = preparedStatement.executeQuery();
                 boolean found=false;
+                int ID=0;
                 while(rs.next())
                 {
+                    ID =rs.getInt(1);
                     email=rs.getString(4);
                     userName=rs.getString(5);
                     passWord=rs.getString(6);
@@ -248,7 +251,7 @@ public class login extends javax.swing.JFrame
                         found=true;
                         
                             msg="User name and password are correct";
-                            suggestion s1 = new suggestion(userName);
+                            suggestion s1 = new suggestion(userName,ID);
                           s1.setVisible(true);
                          this.setVisible(false);
                        
@@ -260,7 +263,7 @@ public class login extends javax.swing.JFrame
                     if(found==true)
                         break;
                 }
-                
+                //System.out.println(ID);
             JOptionPane.showMessageDialog(null,msg);
             myconnection.close();
             }
